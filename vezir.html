@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIMOR — Vezir Koleksiyonu</title>
+<meta name="description" content="BIMOR Vezir koleksiyonu. Vezir sallanan koltuk, klasik Türk mobilyacılığının en özgün parçalarından biri. Altın varak detaylar ve özel kumaş seçenekleriyle hem şık hem konforlu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400;1,6..96,700;1,6..96,900&family=Didact+Gothic&display=swap" rel="stylesheet">
+<style>
+:root{--g:#C4A35A;--gl:#DFC07A;--gd:#8A6E2F;--gp:#F7F0E0;--iv:#FAF8F3;--cr:#F2EDE2;--wh:#FEFDFB;--bl:#171410;--md:#7A7060;--br:rgba(196,163,90,.18);--ease:cubic-bezier(.76,0,.24,1)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--wh);color:var(--bl);font-family:'Didact Gothic',sans-serif;overflow-x:hidden;cursor:none}
+::-webkit-scrollbar{width:2px}::-webkit-scrollbar-track{background:var(--iv)}::-webkit-scrollbar-thumb{background:var(--g)}
+#cur{position:fixed;z-index:99999;width:10px;height:10px;background:var(--g);border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);transition:width .3s,height .3s;mix-blend-mode:multiply}
+#ring{position:fixed;z-index:99998;width:36px;height:36px;border:1px solid var(--g);border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);transition:width .4s,height .4s,opacity .3s;opacity:.6}
+body.hov #cur{width:6px;height:6px}body.hov #ring{width:56px;height:56px;opacity:1}
+@media(hover:none){#cur,#ring{display:none}body{cursor:auto}}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:28px 80px;transition:padding .5s,background .5s,border .5s}
+nav.solid{padding:16px 80px;background:rgba(254,253,251,.97);border-bottom:1px solid var(--br);backdrop-filter:blur(20px)}
+.logo-wrap{display:flex;flex-direction:column;gap:2px;text-decoration:none}
+.logo-main{font-family:'Bodoni Moda',serif;font-size:20px;font-weight:900;letter-spacing:8px;color:var(--bl);line-height:1}
+.logo-sub{font-size:8px;letter-spacing:5px;text-transform:uppercase;color:var(--g)}
+.nav-back{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--md);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .3s,gap .3s}
+.nav-back:hover{color:var(--g);gap:14px}
+.nav-right{display:flex;align-items:center;gap:16px}
+.lang-sw button{background:none;border:none;cursor:none;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--md);padding:4px 8px;transition:color .3s;border-right:1px solid var(--br)}
+.lang-sw button:last-child{border-right:none}
+.lang-sw button.active,.lang-sw button:hover{color:var(--g)}
+/* HERO */
+.ph{height:90vh;min-height:600px;position:relative;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;transform:scale(1.05);transition:transform 8s}
+.ph:hover img{transform:scale(1)}
+.ph-veil{position:absolute;inset:0;background:linear-gradient(to right,rgba(23,20,16,.75) 0%,rgba(23,20,16,.2) 50%,transparent 100%)}
+.ph-cont{position:absolute;top:50%;left:80px;transform:translateY(-50%);z-index:2;max-width:520px}
+.ph-eye{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gl);margin-bottom:20px;display:flex;align-items:center;gap:14px;animation:hIn 1s 0.2s both}
+.ph-eye::before{content:'';width:28px;height:1px;background:var(--gl)}
+.ph-title{font-family:'Bodoni Moda',serif;font-size:clamp(52px,7vw,100px);font-weight:900;font-style:italic;color:white;line-height:.9;animation:hIn 1s .4s both}
+.ph-sub{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:16px;animation:hIn .8s .6s both}
+.ph-btns{display:flex;gap:16px;margin-top:40px;animation:hIn .8s .8s both;flex-wrap:wrap}
+@keyframes hIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.btn-wa{display:inline-flex;align-items:center;gap:12px;padding:16px 40px;background:#25D366;color:white;text-decoration:none;font-size:10px;letter-spacing:3px;text-transform:uppercase;transition:all .4s}
+.btn-wa:hover{background:#1EB558;transform:translateY(-2px);box-shadow:0 12px 40px rgba(37,211,102,.3)}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;border:1px solid rgba(255,255,255,.4);color:rgba(255,255,255,.8);text-decoration:none;font-size:10px;letter-spacing:3px;text-transform:uppercase;transition:all .3s}
+.btn-ghost:hover{border-color:white;color:white}
+/* DETAIL SECTION */
+.detail{display:grid;grid-template-columns:1fr 1fr;background:var(--cr)}
+.detail-img{position:relative;min-height:600px;overflow:hidden}
+.detail-img img{width:100%;height:100%;object-fit:cover;transition:transform 6s}
+.detail:hover .detail-img img{transform:scale(1.04)}
+.detail-cont{padding:100px 80px;display:flex;flex-direction:column;justify-content:center}
+.d-eye{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--g);display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.d-eye::before{content:'';width:28px;height:1px;background:var(--g)}
+.d-title{font-family:'Bodoni Moda',serif;font-size:clamp(36px,4vw,56px);font-weight:900;line-height:.95;color:var(--bl);margin-bottom:24px}
+.d-title i{font-style:italic;color:var(--g)}
+.d-body{font-size:14px;line-height:1.9;color:var(--md);margin-bottom:44px;max-width:400px}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:1px;border:1px solid var(--br);margin-bottom:44px}
+.spec{padding:18px 22px;background:var(--wh);transition:background .3s}
+.spec:hover{background:var(--gp)}
+.spec-l{font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--g);margin-bottom:6px}
+.spec-v{font-size:13px;color:var(--bl)}
+.btn-cta{display:inline-flex;align-items:center;gap:12px;padding:16px 40px;background:var(--bl);color:white;text-decoration:none;font-size:10px;letter-spacing:3px;text-transform:uppercase;transition:all .4s;position:relative;overflow:hidden;align-self:flex-start}
+.btn-cta::before{content:'';position:absolute;inset:0;background:#25D366;transform:translateX(-101%);transition:transform .5s}
+.btn-cta:hover::before{transform:translateX(0)}.btn-cta span{position:relative;z-index:1}
+/* GALLERY */
+.pg{padding:100px 80px;background:var(--iv)}
+.pg-title{font-family:'Bodoni Moda',serif;font-size:clamp(36px,4vw,56px);font-weight:900;color:var(--bl);margin-bottom:48px}
+.pg-title i{font-style:italic;color:var(--g)}
+.pg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.pgi{overflow:hidden;height:320px;position:relative;cursor:none}
+.pgi img{width:100%;height:100%;object-fit:cover;transition:transform .8s,filter .5s;filter:saturate(.85)}
+.pgi:hover img{transform:scale(1.08);filter:saturate(1.1)}
+.pgi-hov{position:absolute;inset:0;background:rgba(23,20,16,0);transition:background .4s;display:flex;align-items:center;justify-content:center}
+.pgi:hover .pgi-hov{background:rgba(23,20,16,.3)}
+.pgi-plus{font-family:'Bodoni Moda',serif;font-size:44px;font-weight:300;color:white;opacity:0;transform:scale(.6);transition:all .4s}
+.pgi:hover .pgi-plus{opacity:1;transform:scale(1)}
+/* WA STRIP */
+.wa-strip{background:var(--bl);padding:80px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.wa-strip-txt{font-family:'Bodoni Moda',serif;font-size:clamp(28px,3.5vw,48px);font-weight:700;font-style:italic;color:white}
+.wa-strip-txt em{color:var(--gl);font-style:normal}
+.wa-big{display:inline-flex;align-items:center;gap:14px;padding:20px 52px;background:#25D366;color:white;text-decoration:none;font-size:11px;letter-spacing:3px;text-transform:uppercase;transition:all .4s;white-space:nowrap}
+.wa-big:hover{background:#1EB558;transform:translateY(-2px);box-shadow:0 16px 50px rgba(37,211,102,.25)}
+/* OTHER COLLECTIONS */
+.other{padding:80px;background:var(--wh)}
+.other-title{font-family:'Bodoni Moda',serif;font-size:clamp(28px,3vw,44px);font-weight:900;color:var(--bl);margin-bottom:40px}
+.other-title i{font-style:italic;color:var(--g)}
+.other-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.oc{position:relative;overflow:hidden;height:240px;text-decoration:none;display:block}
+.oc img{width:100%;height:100%;object-fit:cover;transition:transform .7s,filter .4s;filter:saturate(.8)}
+.oc:hover img{transform:scale(1.08);filter:saturate(1)}
+.oc-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(23,20,16,.8),transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px}
+.oc-name{font-family:'Bodoni Moda',serif;font-size:22px;font-weight:700;font-style:italic;color:white}
+/* LIGHTBOX */
+#lb{position:fixed;inset:0;z-index:9999;background:rgba(23,20,16,.97);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .5s}
+#lb.open{opacity:1;pointer-events:all}
+#lb img{max-width:90vw;max-height:88vh;object-fit:contain}
+#lb-x{position:absolute;top:28px;right:40px;font-size:28px;color:white;background:none;border:none;cursor:none;font-family:'Bodoni Moda',serif;font-weight:300;transition:color .3s}
+#lb-x:hover{color:var(--g)}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+[data-tr],[data-en],[data-ar]{display:none}
+[data-lang="tr"] [data-tr]{display:block}[data-lang="en"] [data-en]{display:block}[data-lang="ar"] [data-ar]{display:block}
+span[data-tr],span[data-en],span[data-ar]{display:none}
+[data-lang="tr"] span[data-tr]{display:inline}[data-lang="en"] span[data-en]{display:inline}[data-lang="ar"] span[data-ar]{display:inline}
+@media(max-width:1024px){
+nav{padding:18px 24px}nav.solid{padding:12px 24px}
+.ph-cont{left:24px;right:24px;max-width:none}
+.detail{grid-template-columns:1fr}.detail-img{min-height:280px}.detail-cont{padding:60px 24px}
+.pg{padding:72px 24px}.pg-grid{grid-template-columns:1fr 1fr}.pgi{height:220px}
+.wa-strip{padding:56px 24px;flex-direction:column;text-align:center}
+.other{padding:56px 24px}.other-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body data-lang="tr">
+<div id="cur"></div><div id="ring"></div>
+
+<nav id="nav">
+  <a href="index.html" class="logo-wrap">
+    <div class="logo-main">BIMOR</div>
+    <div class="logo-sub">Luxury Furniture</div>
+  </a>
+  <a href="index.html" class="nav-back">← <span data-tr>Tüm Koleksiyonlar</span><span data-en>All Collections</span><span data-ar>كل المجموعات</span></a>
+  <div class="nav-right">
+    <div class="lang-sw">
+      <button onclick="setLang('tr')" class="active">TR</button>
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('ar')">AR</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="ph">
+  <img src="vezir-rocking.jpg" alt="Vezir" onerror="this.style.background='linear-gradient(135deg,#2C2820,#C4A35A)'">
+  <div class="ph-veil"></div>
+  <div class="ph-cont">
+    <div class="ph-eye" data-tr>Sallanan Koltuk · BIMOR</div>
+    <div class="ph-eye" data-en>Rocking Chair · BIMOR</div>
+    <div class="ph-eye" data-ar>كرسي هزاز · BIMOR</div>
+    <h1 class="ph-title">Vezir</h1>
+    <div class="ph-sub" data-tr>Özel Üretim · Altın Varak · İnegöl</div>
+    <div class="ph-sub" data-en>Custom Made · Gold Leaf · İnegöl</div>
+    <div class="ph-sub" data-ar>تصنيع مخصص · ورق الذهب · إينيغول</div>
+    <div class="ph-btns">
+      <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20Vezir%20koltuk%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." class="btn-wa" target="_blank">💬 <span data-tr>Fiyat Al</span><span data-en>Get Price</span><span data-ar>احصل على السعر</span></a>
+      <a href="#detail" class="btn-ghost"><span data-tr>Detayları Gör</span><span data-en>See Details</span><span data-ar>عرض التفاصيل</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- DETAIL -->
+<div class="detail reveal" id="detail">
+  <div class="detail-img">
+    <img src="vezir-rocking.jpg" alt="Vezir" onerror="this.style.background='linear-gradient(135deg,#C4A35A,#F7F0E0)'">
+  </div>
+  <div class="detail-cont">
+    <div class="d-eye" data-tr>Sallanan Koltuk</div>
+    <div class="d-eye" data-en>Rocking Chair</div>
+    <div class="d-eye" data-ar>كرسي هزاز</div>
+    <h2 class="d-title" data-tr>Vezir <i>Koleksiyonu</i></h2>
+    <h2 class="d-title" data-en>Vezir <i>Collection</i></h2>
+    <h2 class="d-title" data-ar>مجموعة <i>وزير</i></h2>
+    <p class="d-body" data-tr>Vezir sallanan koltuk, klasik Türk mobilyacılığının en özgün parçalarından biri. Altın varak detaylar ve özel kumaş seçenekleriyle hem şık hem konforlu.</p>
+    <p class="d-body" data-en>The Vezir rocking chair is one of the most original pieces of classic Turkish furniture. Stylish and comfortable with gold leaf details and custom fabric options.</p>
+    <p class="d-body" data-ar>كرسي الهزاز وزير هو أحد أكثر القطع أصالة في الأثاث التركي الكلاسيكي.</p>
+    <div class="specs">
+      <div class="spec"><div class="spec-l" data-tr>Malzeme</div><div class="spec-l" data-en>Material</div><div class="spec-l" data-ar>المادة</div><div class="spec-v" data-tr>Masif Ahşap · Altın Varak</div><div class="spec-v" data-en>Solid Wood · Gold Leaf</div><div class="spec-v" data-ar>خشب صلب · ورق الذهب</div></div>
+      <div class="spec"><div class="spec-l" data-tr>Döşeme</div><div class="spec-l" data-en>Upholstery</div><div class="spec-l" data-ar>التنجيد</div><div class="spec-v" data-tr>Özel kumaş seçeneği</div><div class="spec-v" data-en>Custom fabric options</div><div class="spec-v" data-ar>خيارات قماش مخصصة</div></div>
+      <div class="spec"><div class="spec-l" data-tr>Üretim</div><div class="spec-l" data-en>Made In</div><div class="spec-l" data-ar>الصنع</div><div class="spec-v">İnegöl, Bursa 🇹🇷</div></div>
+      <div class="spec"><div class="spec-l" data-tr>Teslimat</div><div class="spec-l" data-en>Delivery</div><div class="spec-l" data-ar>التسليم</div><div class="spec-v" data-tr>Dünya geneli</div><div class="spec-v" data-en>Worldwide</div><div class="spec-v" data-ar>عالمي</div></div>
+    </div>
+    <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20Vezir%20koltuk%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." class="btn-cta" target="_blank"><span>💬 <span data-tr>WhatsApp'tan Fiyat Al</span><span data-en>Get Price on WhatsApp</span><span data-ar>احصل على السعر</span></span></a>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section class="pg reveal">
+  <h2 class="pg-title" data-tr>Vezir <i>Galeri</i></h2>
+  <h2 class="pg-title" data-en>Vezir <i>Gallery</i></h2>
+  <h2 class="pg-title" data-ar>معرض <i>وزير</i></h2>
+  <div class="pg-grid">
+    <div class="pgi" onclick="openLB(this)"><img src="vezir-rocking.jpg" alt="" onerror="this.style.background='linear-gradient(135deg,#C4A35A,#8A6E2F)'"><div class="pgi-hov"><div class="pgi-plus">+</div></div></div>
+    <div class="pgi" onclick="openLB(this)"><img src="vezir-rocking.jpg" alt="" onerror="this.style.background='linear-gradient(135deg,#F7F0E0,#C4A35A)'"><div class="pgi-hov"><div class="pgi-plus">+</div></div></div>
+    <div class="pgi" onclick="openLB(this)"><img src="vezir-rocking.jpg" alt="" onerror="this.style.background='linear-gradient(135deg,#DFC07A,#8A6E2F)'"><div class="pgi-hov"><div class="pgi-plus">+</div></div></div>
+    <div class="pgi" onclick="openLB(this)"><img src="vezir-rocking.jpg" alt="" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#F7F0E0)'"><div class="pgi-hov"><div class="pgi-plus">+</div></div></div>
+  </div>
+</section>
+
+<!-- WA STRIP -->
+<div class="wa-strip reveal">
+  <div class="wa-strip-txt" data-tr>"Vezir için <em>fiyat almak</em> ister misiniz?"</div>
+  <div class="wa-strip-txt" data-en>"Want to get a <em>price</em> for Vezir?"</div>
+  <div class="wa-strip-txt" data-ar>"هل تريد الحصول على <em>سعر</em> لـ وزير؟"</div>
+  <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20Vezir%20koltuk%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." class="wa-big" target="_blank">💬 WhatsApp</a>
+</div>
+
+<!-- OTHER COLLECTIONS -->
+<section class="other reveal">
+  <h2 class="other-title" data-tr>Diğer <i>Koleksiyonlar</i></h2>
+  <h2 class="other-title" data-en>Other <i>Collections</i></h2>
+  <h2 class="other-title" data-ar>مجموعات <i>أخرى</i></h2>
+  <div class="other-grid">
+    <a href="bagdat.html" class="oc"><img src="bagdat-hero.jpg" alt="Bağdat" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#C4A35A)'"><div class="oc-ov"><div class="oc-name">Bağdat</div></div></a>
+    <a href="alex.html" class="oc"><img src="alex-hero.jpg" alt="Alex" onerror="this.style.background='linear-gradient(135deg,#C4A35A,#F7F0E0)'"><div class="oc-ov"><div class="oc-name">Alex</div></div></a>
+    <a href="varna.html" class="oc"><img src="varna-hero.jpg" alt="Varna" onerror="this.style.background='linear-gradient(135deg,#DFC07A,#8A6E2F)'"><div class="oc-ov"><div class="oc-name">Varna</div></div></a>
+    <a href="milano.html" class="oc"><img src="milano-hero.jpg" alt="Milano" onerror="this.style.background='linear-gradient(135deg,#F7F0E0,#DFC07A)'"><div class="oc-ov"><div class="oc-name">Milano</div></div></a>
+  </div>
+</section>
+
+<div id="lb" onclick="closeLB()"><button id="lb-x" onclick="closeLB()">×</button><img src="" alt="" id="lb-img"></div>
+
+<script>
+const cur=document.getElementById('cur'),ring=document.getElementById('ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function a(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
+document.querySelectorAll('a,button,.pgi,.oc').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));});
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('solid',scrollY>60);});
+function setLang(l){document.body.setAttribute('data-lang',l);document.querySelectorAll('.lang-sw button').forEach((b,i)=>b.classList.toggle('active',['tr','en','ar'][i]===l));document.documentElement.dir=l==='ar'?'rtl':'ltr';}
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+function openLB(item){const img=item.querySelector('img');document.getElementById('lb-img').src=img.src;document.getElementById('lb').classList.add('open');}
+function closeLB(){document.getElementById('lb').classList.remove('open');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB();});
+</script>
+</body>
+</html>
