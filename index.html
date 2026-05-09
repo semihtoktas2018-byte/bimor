@@ -192,6 +192,70 @@ footer{background:var(--bl);padding:72px 80px 36px}
 [data-lang="tr"] [data-tr]{display:block}[data-lang="en"] [data-en]{display:block}[data-lang="ar"] [data-ar]{display:block}
 span[data-tr],span[data-en],span[data-ar]{display:none}
 [data-lang="tr"] span[data-tr]{display:inline}[data-lang="en"] span[data-en]{display:inline}[data-lang="ar"] span[data-ar]{display:inline}
+/* ── PATCH: LUXURY CONVERSION UPGRADE ── */
+
+/* Export Badge */
+.export-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border:1px solid rgba(196,163,90,.35);background:rgba(196,163,90,.06);margin-bottom:28px;animation:hIn .8s 2.1s both}
+.export-badge span{font-size:8px;letter-spacing:4px;text-transform:uppercase;color:var(--g)}
+.export-badge::before{content:'';width:5px;height:5px;background:var(--g);border-radius:50%;animation:pulse-dot 2s infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+
+/* Hero CTA güçlendirme */
+.btn-wa-hero{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;background:#25D366;color:white;text-decoration:none;font-size:10px;letter-spacing:3px;text-transform:uppercase;transition:all .4s;position:relative;overflow:hidden}
+.btn-wa-hero::before{content:'';position:absolute;inset:0;background:#1EB558;transform:translateX(-101%);transition:transform .5s}
+.btn-wa-hero:hover::before{transform:translateX(0)}.btn-wa-hero span{position:relative;z-index:1}
+
+/* Floating WhatsApp */
+.float-wa{position:fixed;bottom:36px;right:36px;z-index:9000;display:flex;align-items:center;gap:14px;opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s;pointer-events:none}
+.float-wa.show{opacity:1;transform:translateY(0);pointer-events:all}
+.float-wa-label{background:var(--bl);color:white;font-size:9px;letter-spacing:3px;text-transform:uppercase;padding:10px 18px;white-space:nowrap;opacity:0;transform:translateX(10px);transition:opacity .3s,transform .3s}
+.float-wa:hover .float-wa-label{opacity:1;transform:translateX(0)}
+.float-wa-btn{width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:24px;box-shadow:0 8px 32px rgba(37,211,102,.35);animation:wa-pulse 2.8s ease-in-out infinite}
+@keyframes wa-pulse{0%,100%{box-shadow:0 8px 32px rgba(37,211,102,.35)}50%{box-shadow:0 8px 48px rgba(37,211,102,.55),0 0 0 8px rgba(37,211,102,.08)}}
+
+/* Collection card premium hover upgrade */
+.cc img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease),filter .6s,brightness .4s;filter:saturate(.85) brightness(.97)}
+.cc:hover img{transform:scale(1.09);filter:saturate(1.15) brightness(1.02)}
+.cc-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(23,20,16,.88) 0%,rgba(23,20,16,.05) 55%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:36px;transition:background .6s}
+.cc:hover .cc-ov{background:linear-gradient(to top,rgba(23,20,16,.96) 0%,rgba(196,163,90,.12) 100%)}
+.cc-glow{position:absolute;inset:0;opacity:0;transition:opacity .6s;background:radial-gradient(ellipse at center bottom,rgba(196,163,90,.14) 0%,transparent 70%)}
+.cc:hover .cc-glow{opacity:1}
+.cc-name{font-family:'Bodoni Moda',serif;font-size:32px;font-weight:700;font-style:italic;color:white;line-height:1;transition:letter-spacing .4s}
+.cc:hover .cc-name{letter-spacing:1px}
+.cc-cta{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0);margin-top:14px;display:flex;align-items:center;gap:8px;transform:translateY(10px);transition:all .5s var(--ease)}
+.cc:hover .cc-cta{color:var(--gl);transform:translateY(0);gap:14px}
+
+/* Pillar upgrade */
+.pillar{padding:48px 36px;border-right:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden;transition:background .5s,transform .4s}
+.pillar:hover{transform:translateY(-4px)}
+.p-text{font-size:13px;line-height:1.85;color:rgba(255,255,255,.45);transition:color .4s}
+.pillar:hover .p-text{color:rgba(255,255,255,.65)}
+
+/* Pillars section — villa/hotel/project badge row */
+.p-badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.p-badge{font-size:8px;letter-spacing:3px;text-transform:uppercase;padding:6px 14px;border:1px solid rgba(196,163,90,.25);color:rgba(196,163,90,.7)}
+
+/* Contact WA button upgrade */
+.c-wa{display:inline-flex;align-items:center;gap:14px;margin-top:48px;padding:18px 44px;background:#25D366;color:white;text-decoration:none;font-size:11px;letter-spacing:3px;text-transform:uppercase;transition:all .4s;position:relative;overflow:hidden}
+.c-wa::before{content:'';position:absolute;inset:0;background:#1EB558;transform:translateX(-101%);transition:transform .5s}
+.c-wa:hover{transform:translateY(-3px);box-shadow:0 20px 60px rgba(37,211,102,.3)}.c-wa:hover::before{transform:translateX(0)}.c-wa>*{position:relative;z-index:1}
+.c-trust{display:flex;gap:28px;margin-top:32px;flex-wrap:wrap}
+.c-trust-item{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--md);display:flex;align-items:center;gap:8px}
+.c-trust-item::before{content:'✦';color:var(--g);font-size:7px}
+
+/* Smooth reveal variants */
+.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(40px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+
+/* Form button upgrade */
+.fbtn{padding:16px 38px;background:var(--bl);color:white;border:none;cursor:none;font-family:'Didact Gothic',sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;transition:all .4s;margin-top:8px;position:relative;overflow:hidden;width:100%}
+.fbtn::before{content:'';position:absolute;inset:0;background:var(--g);transform:translateX(-101%);transition:transform .5s}
+.fbtn:hover::before{transform:translateX(0)}.fbtn>span{position:relative;z-index:1}
+
+/* ── END PATCH CSS ── */
+
 /* MOBILE */
 @media(max-width:1024px){
 nav{padding:20px 24px}nav.solid{padding:14px 24px}.nav-links,.nav-wa{display:none}.ham{display:flex}
@@ -202,6 +266,7 @@ nav{padding:20px 24px}nav.solid{padding:14px 24px}.nav-links,.nav-wa{display:non
 .pillars{padding:80px 24px}.p-grid{grid-template-columns:1fr 1fr}.pillar{border-bottom:1px solid rgba(255,255,255,.06);border-right:none}.pillar:nth-child(odd){border-right:1px solid rgba(255,255,255,.06)}
 .contact-s{grid-template-columns:1fr}.c-l{padding:72px 24px;border-right:none;border-bottom:1px solid var(--br)}.c-r{padding:72px 24px}
 footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.frow{grid-template-columns:1fr}
+.float-wa{bottom:24px;right:20px}.float-wa-btn{width:52px;height:52px;font-size:22px}.float-wa-label{display:none}
 }
 </style>
 </head>
@@ -236,6 +301,7 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
 <!-- HERO -->
 <section class="hero">
   <div class="hero-l">
+    <div class="export-badge"><span data-tr>Worldwide Export · Custom Manufacturing · İnegöl</span><span data-en>Worldwide Export · Custom Manufacturing · İnegöl</span><span data-ar>تصدير عالمي · تصنيع مخصص · إينيغول</span></div>
     <div class="h-eye" data-tr>İnegöl · Bursa · Dünyaya</div>
     <div class="h-eye" data-en>İnegöl · Bursa · Worldwide</div>
     <div class="h-eye" data-ar>إينيغول · بورصة · للعالم</div>
@@ -246,7 +312,7 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
     <p class="h-desc" data-ar>علامة تجارية فاخرة للأثاث من إينيغول. كل قطعة مصنوعة حسب الطلب وتُصدَّر عالمياً.</p>
     <div class="h-btns">
       <a href="#collection" class="btn-dark"><span data-tr>Koleksiyonu Keşfet</span><span data-en>Explore Collection</span><span data-ar>اكتشف المجموعة</span></a>
-      <a href="https://wa.me/905446452430" class="btn-link" target="_blank"><span data-tr>Fiyat Al</span><span data-en>Get Quote</span><span data-ar>احصل على سعر</span></a>
+      <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20fiyat%20almak%20istiyorum." class="btn-wa-hero" target="_blank"><span>💬</span>&nbsp;<span data-tr>Fiyat Al</span><span data-en>Get Quote</span><span data-ar>احصل على سعر</span></a>
     </div>
   </div>
   <div class="hero-r">
@@ -303,16 +369,16 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
     <p class="col-desc" data-ar>10 مجموعات فريدة. كل منها مصنوع حسب الطلب.</p>
   </div>
   <div class="col-grid">
-    <a href="bagdat.html" class="cc"><img src="bagdat-hero.jpg" alt="Bağdat" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#C4A35A)'"><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Bağdat</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="alex.html" class="cc"><img src="alex-hero.jpg" alt="Alex" onerror="this.style.background='linear-gradient(135deg,#C4A35A,#F7F0E0)'"><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Alex</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="varna.html" class="cc"><img src="varna-hero.jpg" alt="Varna" onerror="this.style.background='linear-gradient(135deg,#DFC07A,#8A6E2F)'"><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Varna</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="milano.html" class="cc"><img src="milano-hero.jpg" alt="Milano" onerror="this.style.background='linear-gradient(135deg,#F7F0E0,#DFC07A)'"><div class="cc-ov"><div class="cc-cat" data-tr>Yemek Odası</div><div class="cc-cat" data-en>Dining Room</div><div class="cc-cat" data-ar>غرفة طعام</div><div class="cc-name">Milano</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="hanedan.html" class="cc"><img src="hanedan-hero.jpg" alt="Hanedan" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#F7F0E0)'"><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Hanedan</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="sahmaran.html" class="cc"><img src="sahmaran-hero.jpg" alt="Şahmaran" onerror="this.style.background='linear-gradient(135deg,#C4A35A,#2C2820)'"><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Şahmaran</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="zera.html" class="cc"><img src="zera-hero.jpg" alt="Zera" onerror="this.style.background='linear-gradient(135deg,#F7F0E0,#C4A35A)'"><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Zera</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="aslan-throne.html" class="cc"><img src="aslan-throne.jpg" alt="Aslan Throne" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#C4A35A)'"><div class="cc-ov"><div class="cc-cat" data-tr>Özel Koleksiyon</div><div class="cc-cat" data-en>Special Collection</div><div class="cc-cat" data-ar>مجموعة خاصة</div><div class="cc-name">Aslan Throne</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="vezir.html" class="cc"><img src="vezir-rocking.jpg" alt="Vezir" onerror="this.style.background='linear-gradient(135deg,#DFC07A,#C4A35A)'"><div class="cc-ov"><div class="cc-cat" data-tr>Sallanan Koltuk</div><div class="cc-cat" data-en>Rocking Chair</div><div class="cc-cat" data-ar>كرسي هزاز</div><div class="cc-name">Vezir</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="sumen.html" class="cc"><img src="sumen-chaise.jpg" alt="Sümen" onerror="this.style.background='linear-gradient(135deg,#F7F0E0,#8A6E2F)'"><div class="cc-ov"><div class="cc-cat" data-tr>Şezlong</div><div class="cc-cat" data-en>Chaise Lounge</div><div class="cc-cat" data-ar>شيزلونج</div><div class="cc-name">Sümen</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
+    <a href="bagdat.html" class="cc"><img src="bagdat-hero.jpg" alt="Bağdat" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#C4A35A)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Bağdat</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
+    <a href="alex.html" class="cc"><img src="alex-hero.jpg" alt="Alex" onerror="this.style.background='linear-gradient(135deg,#C4A35A,#F7F0E0)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Alex</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
+    <a href="varna.html" class="cc"><img src="varna-hero.jpg" alt="Varna" onerror="this.style.background='linear-gradient(135deg,#DFC07A,#8A6E2F)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Varna</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
+    <a href="milano.html" class="cc"><img src="milano-hero.jpg" alt="Milano" onerror="this.style.background='linear-gradient(135deg,#F7F0E0,#DFC07A)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Yemek Odası</div><div class="cc-cat" data-en>Dining Room</div><div class="cc-cat" data-ar>غرفة طعام</div><div class="cc-name">Milano</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
+    <a href="hanedan.html" class="cc"><img src="hanedan-hero.jpg" alt="Hanedan" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#F7F0E0)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Hanedan</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
+    <a href="sahmaran.html" class="cc"><img src="sahmaran-hero.jpg" alt="Şahmaran" onerror="this.style.background='linear-gradient(135deg,#C4A35A,#2C2820)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Şahmaran</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
+    <a href="zera.html" class="cc"><img src="zera-hero.jpg" alt="Zera" onerror="this.style.background='linear-gradient(135deg,#F7F0E0,#C4A35A)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Zera</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
+    <a href="aslan-throne.html" class="cc"><img src="aslan-throne.jpg" alt="Aslan Throne" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#C4A35A)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Özel Koleksiyon</div><div class="cc-cat" data-en>Special Collection</div><div class="cc-cat" data-ar>مجموعة خاصة</div><div class="cc-name">Aslan Throne</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
+    <a href="vezir.html" class="cc"><img src="vezir-rocking.jpg" alt="Vezir" onerror="this.style.background='linear-gradient(135deg,#DFC07A,#C4A35A)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Sallanan Koltuk</div><div class="cc-cat" data-en>Rocking Chair</div><div class="cc-cat" data-ar>كرسي هزاز</div><div class="cc-name">Vezir</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
+    <a href="sumen.html" class="cc"><img src="sumen-chaise.jpg" alt="Sümen" onerror="this.style.background='linear-gradient(135deg,#F7F0E0,#8A6E2F)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Şezlong</div><div class="cc-cat" data-en>Chaise Lounge</div><div class="cc-cat" data-ar>شيزلونج</div><div class="cc-name">Sümen</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
   </div>
 </section>
 
@@ -337,10 +403,10 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
     <h2 class="p-title" data-ar>فرقنا<br><i>في التفاصيل</i></h2>
   </div>
   <div class="p-grid">
-    <div class="pillar"><div class="p-num">01</div><span class="p-icon">✦</span><div class="p-name" data-tr>Özel Üretim</div><div class="p-name" data-en>Custom Made</div><div class="p-name" data-ar>تصنيع مخصص</div><p class="p-text" data-tr>Her ürün siparişe özel. Boyut, renk, kumaş — tamamen size göre.</p><p class="p-text" data-en>Every piece made to order. Size, color, fabric — entirely yours.</p><p class="p-text" data-ar>كل منتج حسب الطلب.</p></div>
-    <div class="pillar"><div class="p-num">02</div><span class="p-icon">◈</span><div class="p-name" data-tr>Altın Varak</div><div class="p-name" data-en>Gold Leaf</div><div class="p-name" data-ar>ورق الذهب</div><p class="p-text" data-tr>El uygulamalı gerçek altın varak her parçayı sanat eserine dönüştürür.</p><p class="p-text" data-en>Hand-applied gold leaf turns every piece into a work of art.</p><p class="p-text" data-ar>ورق الذهب المطبق يدوياً يحوّل كل قطعة إلى تحفة.</p></div>
-    <div class="pillar"><div class="p-num">03</div><span class="p-icon">❋</span><div class="p-name" data-tr>Dünya İhracatı</div><div class="p-name" data-en>Global Export</div><div class="p-name" data-ar>تصدير عالمي</div><p class="p-text" data-tr>30+ ülkeye ihracat. Lojistik ve ambalajı biz yönetiriz.</p><p class="p-text" data-en>Export to 30+ countries. We handle logistics and packaging.</p><p class="p-text" data-ar>تصدير إلى أكثر من 30 دولة.</p></div>
-    <div class="pillar"><div class="p-num">04</div><span class="p-icon">◇</span><div class="p-name" data-tr>Fabrikadan Fiyat</div><div class="p-name" data-en>Factory Price</div><div class="p-name" data-ar>سعر المصنع</div><p class="p-text" data-tr>Fabrikadan direkt alım — lüks kalite, toptan fiyat.</p><p class="p-text" data-en>Direct from factory — luxury quality at wholesale price.</p><p class="p-text" data-ar>مباشرة من المصنع — جودة فاخرة بسعر الجملة.</p></div>
+    <div class="pillar"><div class="p-num">01</div><span class="p-icon">✦</span><div class="p-name" data-tr>Özel Üretim</div><div class="p-name" data-en>Custom Made</div><div class="p-name" data-ar>تصنيع مخصص</div><p class="p-text" data-tr>Her ürün siparişe özel üretilir. Boyut, renk, kumaş ve detay — tamamen size göre tasarlanır.</p><p class="p-text" data-en>Every piece is made to order. Size, color, fabric and detail — designed entirely for you.</p><p class="p-text" data-ar>كل منتج مصنوع حسب الطلب. الأبعاد، اللون، القماش — مصمم خصيصاً لك.</p><div class="p-badges"><span class="p-badge" data-tr>Villa</span><span class="p-badge" data-en>Villa</span><span class="p-badge" data-tr>Otel</span><span class="p-badge" data-en>Hotel</span><span class="p-badge" data-tr>Proje</span><span class="p-badge" data-en>Project</span></div></div>
+    <div class="pillar"><div class="p-num">02</div><span class="p-icon">◈</span><div class="p-name" data-tr>Altın Varak & Premium Materyal</div><div class="p-name" data-en>Gold Leaf & Premium Material</div><div class="p-name" data-ar>ورق الذهب والمواد الفاخرة</div><p class="p-text" data-tr>El uygulamalı gerçek altın varak, velvet ve premium kumaşlar her parçayı bir sanat eserine dönüştürür.</p><p class="p-text" data-en>Hand-applied real gold leaf, velvet and premium fabrics transform each piece into a work of art.</p><p class="p-text" data-ar>ورق الذهب الحقيقي، المخمل والأقمشة الفاخرة تحوّل كل قطعة إلى تحفة فنية.</p></div>
+    <div class="pillar"><div class="p-num">03</div><span class="p-icon">❋</span><div class="p-name" data-tr>Dünya İhracatı</div><div class="p-name" data-en>Global Export</div><div class="p-name" data-ar>تصدير عالمي</div><p class="p-text" data-tr>30+ ülkeye sorunsuz ihracat. Profesyonel ambalaj, sigortalı lojistik ve teslimat takibi biz de.</p><p class="p-text" data-en>Seamless export to 30+ countries. Professional packaging, insured logistics and delivery tracking — handled by us.</p><p class="p-text" data-ar>تصدير سلس إلى أكثر من 30 دولة. تغليف احترافي ولوجستيات مؤمّنة.</p></div>
+    <div class="pillar"><div class="p-num">04</div><span class="p-icon">◇</span><div class="p-name" data-tr>Fabrikadan Direkt Fiyat</div><div class="p-name" data-en>Direct Factory Price</div><div class="p-name" data-ar>سعر المصنع المباشر</div><p class="p-text" data-tr>Aracı yok. Fabrikadan direkt alım — Avrupa kalitesi, doğru fiyat. Toptan ve perakende her ölçek için çözüm.</p><p class="p-text" data-en>No middlemen. Direct factory purchase — European quality, fair price. Solutions for wholesale and retail at every scale.</p><p class="p-text" data-ar>لا وسطاء. شراء مباشر من المصنع — جودة أوروبية، سعر عادل.</p></div>
   </div>
 </section>
 
@@ -360,7 +426,18 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
       <div class="c-row"><span class="c-lbl">Facebook</span><span class="c-val"><a href="https://facebook.com/profile.php?id=61575530913797" target="_blank">BIMOR Luxury Furniture</a></span></div>
       <div class="c-row"><span class="c-lbl" data-tr>Adres</span><span class="c-lbl" data-en>Address</span><span class="c-lbl" data-ar>العنوان</span><span class="c-val">İnegöl, Bursa · Türkiye 🇹🇷</span></div>
     </div>
-    <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20bilgi%20almak%20istiyorum." class="c-wa" target="_blank">💬 &nbsp;<span data-tr>WhatsApp'ta Yaz</span><span data-en>Message on WhatsApp</span><span data-ar>راسلنا</span></a>
+    <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20bilgi%20almak%20istiyorum." class="c-wa" target="_blank"><span>💬</span>&nbsp;<span data-tr>WhatsApp'ta Yaz</span><span data-en>Message on WhatsApp</span><span data-ar>راسلنا</span></a>
+    <div class="c-trust">
+      <div class="c-trust-item" data-tr>7/24 Yanınızdayız</div>
+      <div class="c-trust-item" data-en>Available 24/7</div>
+      <div class="c-trust-item" data-ar>متاح 24/7</div>
+      <div class="c-trust-item" data-tr>Ortalama 15dk Yanıt</div>
+      <div class="c-trust-item" data-en>~15min Response</div>
+      <div class="c-trust-item" data-ar>رد خلال 15 دقيقة</div>
+      <div class="c-trust-item" data-tr>30+ Ülke İhracatı</div>
+      <div class="c-trust-item" data-en>30+ Countries Served</div>
+      <div class="c-trust-item" data-ar>خدمة أكثر من 30 دولة</div>
+    </div>
   </div>
   <div class="c-r">
     <div class="c-form-title" data-tr>Teklif İsteyin</div><div class="c-form-title" data-en>Request a Quote</div><div class="c-form-title" data-ar>اطلب عرض سعر</div>
@@ -429,6 +506,14 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
   </div>
 </footer>
 
+<!-- FLOATING WHATSAPP -->
+<div class="float-wa" id="floatWa">
+  <div class="float-wa-label" data-tr>Hemen Yaz</div>
+  <div class="float-wa-label" data-en>Chat Now</div>
+  <div class="float-wa-label" data-ar>تواصل الآن</div>
+  <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20bilgi%20almak%20istiyorum." class="float-wa-btn" target="_blank" aria-label="WhatsApp">💬</a>
+</div>
+
 <script>
 const cur=document.getElementById('cur'),ring=document.getElementById('ring');
 let mx=0,my=0,rx=0,ry=0;
@@ -436,12 +521,15 @@ document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.le
 (function a(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
 document.querySelectorAll('a,button,.cc').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));});
 window.addEventListener('load',()=>{setTimeout(()=>document.getElementById('pre').classList.add('done'),1800);});
-window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('solid',scrollY>60);});
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('solid',scrollY>60);
+  document.getElementById('floatWa').classList.toggle('show',scrollY>300);
+});
 function setLang(l){document.body.setAttribute('data-lang',l);document.querySelectorAll('.lang-sw button').forEach((b,i)=>b.classList.toggle('active',['tr','en','ar'][i]===l));document.documentElement.dir=l==='ar'?'rtl':'ltr';}
 function mobO(){document.getElementById('mob').classList.add('open');}
 function mobC(){document.getElementById('mob').classList.remove('open');}
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.1});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
 function sendWA(){
   const n=document.getElementById('fn').value||'—';
   const p=document.getElementById('fp').value||'—';
