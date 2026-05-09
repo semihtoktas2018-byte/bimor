@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BIMOR — Varna Koleksiyonu</title>
-<meta name="description" content="BIMOR Varna koleksiyonu. Varna koleksiyonu; berjer, koltuk takımı, yemek masası ve sehpa seçenekleriyle tam bir yaşam alanı çözümü sunar. El işçiliği ve altın varak detaylar.">
+<meta name="description" content="BIMOR Varna koleksiyonu. Varna collection combines Black Sea elegance with İnegöl's master craftsmanship. Solid wood frame, hand-applied gold leaf and custom upholstery options — ideal for villa and hotel projects.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400;1,6..96,700;1,6..96,900&family=Didact+Gothic&display=swap" rel="stylesheet">
 <style>
@@ -32,18 +32,24 @@ nav.solid{padding:16px 80px;background:rgba(254,253,251,.97);border-bottom:1px s
 .ph{height:90vh;min-height:600px;position:relative;overflow:hidden}
 .ph img{width:100%;height:100%;object-fit:cover;transform:scale(1.05);transition:transform 8s}
 .ph:hover img{transform:scale(1)}
-.ph-veil{position:absolute;inset:0;background:linear-gradient(to right,rgba(23,20,16,.75) 0%,rgba(23,20,16,.2) 50%,transparent 100%)}
-.ph-cont{position:absolute;top:50%;left:80px;transform:translateY(-50%);z-index:2;max-width:520px}
+.ph-veil{position:absolute;inset:0;background:linear-gradient(to right,rgba(23,20,16,.82) 0%,rgba(23,20,16,.25) 55%,transparent 100%)}
+.ph-cont{position:absolute;top:50%;left:80px;transform:translateY(-50%);z-index:2;max-width:560px}
 .ph-eye{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gl);margin-bottom:20px;display:flex;align-items:center;gap:14px;animation:hIn 1s 0.2s both}
 .ph-eye::before{content:'';width:28px;height:1px;background:var(--gl)}
 .ph-title{font-family:'Bodoni Moda',serif;font-size:clamp(52px,7vw,100px);font-weight:900;font-style:italic;color:white;line-height:.9;animation:hIn 1s .4s both}
 .ph-sub{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:16px;animation:hIn .8s .6s both}
 .ph-btns{display:flex;gap:16px;margin-top:40px;animation:hIn .8s .8s both;flex-wrap:wrap}
 @keyframes hIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-.btn-wa{display:inline-flex;align-items:center;gap:12px;padding:16px 40px;background:#25D366;color:white;text-decoration:none;font-size:10px;letter-spacing:3px;text-transform:uppercase;transition:all .4s}
-.btn-wa:hover{background:#1EB558;transform:translateY(-2px);box-shadow:0 12px 40px rgba(37,211,102,.3)}
+.btn-wa{display:inline-flex;align-items:center;gap:12px;padding:16px 40px;background:#25D366;color:white;text-decoration:none;font-size:10px;letter-spacing:3px;text-transform:uppercase;transition:all .4s;position:relative;overflow:hidden}
+.btn-wa::before{content:'';position:absolute;inset:0;background:#1EB558;transform:translateX(-101%);transition:transform .5s}
+.btn-wa:hover::before{transform:translateX(0)}.btn-wa:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(37,211,102,.3)}.btn-wa>*{position:relative;z-index:1}
 .btn-ghost{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;border:1px solid rgba(255,255,255,.4);color:rgba(255,255,255,.8);text-decoration:none;font-size:10px;letter-spacing:3px;text-transform:uppercase;transition:all .3s}
 .btn-ghost:hover{border-color:white;color:white}
+/* TRUST BAR */
+.trust-bar{background:var(--bl);padding:18px 80px;display:flex;align-items:center;gap:48px;overflow:hidden;border-bottom:1px solid rgba(196,163,90,.12)}
+.tb-item{display:flex;align-items:center;gap:12px;white-space:nowrap}
+.tb-icon{color:var(--g);font-size:14px}
+.tb-text{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.45)}
 /* DETAIL SECTION */
 .detail{display:grid;grid-template-columns:1fr 1fr;background:var(--cr)}
 .detail-img{position:relative;min-height:600px;overflow:hidden}
@@ -54,15 +60,25 @@ nav.solid{padding:16px 80px;background:rgba(254,253,251,.97);border-bottom:1px s
 .d-eye::before{content:'';width:28px;height:1px;background:var(--g)}
 .d-title{font-family:'Bodoni Moda',serif;font-size:clamp(36px,4vw,56px);font-weight:900;line-height:.95;color:var(--bl);margin-bottom:24px}
 .d-title i{font-style:italic;color:var(--g)}
-.d-body{font-size:14px;line-height:1.9;color:var(--md);margin-bottom:44px;max-width:400px}
-.specs{display:grid;grid-template-columns:1fr 1fr;gap:1px;border:1px solid var(--br);margin-bottom:44px}
+.d-body{font-size:14px;line-height:1.9;color:var(--md);margin-bottom:44px;max-width:420px}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:1px;border:1px solid var(--br);margin-bottom:32px}
 .spec{padding:18px 22px;background:var(--wh);transition:background .3s}
 .spec:hover{background:var(--gp)}
 .spec-l{font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--g);margin-bottom:6px}
 .spec-v{font-size:13px;color:var(--bl)}
-.btn-cta{display:inline-flex;align-items:center;gap:12px;padding:16px 40px;background:var(--bl);color:white;text-decoration:none;font-size:10px;letter-spacing:3px;text-transform:uppercase;transition:all .4s;position:relative;overflow:hidden;align-self:flex-start}
-.btn-cta::before{content:'';position:absolute;inset:0;background:#25D366;transform:translateX(-101%);transition:transform .5s}
-.btn-cta:hover::before{transform:translateX(0)}.btn-cta span{position:relative;z-index:1}
+/* Delivery countries */
+.delivery-row{display:flex;align-items:center;gap:12px;margin-bottom:32px;padding:16px 20px;background:rgba(196,163,90,.06);border-left:2px solid var(--g)}
+.delivery-flag{font-size:18px}
+.delivery-text{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--md)}
+.delivery-text strong{color:var(--bl);display:block;font-size:9px;letter-spacing:3px}
+/* CTA group */
+.cta-group{display:flex;flex-direction:column;gap:12px;align-self:flex-start}
+.btn-cta{display:inline-flex;align-items:center;gap:12px;padding:16px 40px;background:#25D366;color:white;text-decoration:none;font-size:10px;letter-spacing:3px;text-transform:uppercase;transition:all .4s;position:relative;overflow:hidden}
+.btn-cta::before{content:'';position:absolute;inset:0;background:#1EB558;transform:translateX(-101%);transition:transform .5s}
+.btn-cta:hover::before{transform:translateX(0)}.btn-cta:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(37,211,102,.3)}.btn-cta>*{position:relative;z-index:1}
+.btn-catalog{display:inline-flex;align-items:center;gap:12px;padding:14px 36px;background:var(--bl);color:white;text-decoration:none;font-size:10px;letter-spacing:3px;text-transform:uppercase;transition:all .4s;position:relative;overflow:hidden}
+.btn-catalog::before{content:'';position:absolute;inset:0;background:var(--g);transform:translateX(-101%);transition:transform .5s}
+.btn-catalog:hover::before{transform:translateX(0)}.btn-catalog>*{position:relative;z-index:1}
 /* GALLERY */
 .pg{padding:100px 80px;background:var(--iv)}
 .pg-title{font-family:'Bodoni Moda',serif;font-size:clamp(36px,4vw,56px);font-weight:900;color:var(--bl);margin-bottom:48px}
@@ -79,8 +95,9 @@ nav.solid{padding:16px 80px;background:rgba(254,253,251,.97);border-bottom:1px s
 .wa-strip{background:var(--bl);padding:80px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
 .wa-strip-txt{font-family:'Bodoni Moda',serif;font-size:clamp(28px,3.5vw,48px);font-weight:700;font-style:italic;color:white}
 .wa-strip-txt em{color:var(--gl);font-style:normal}
-.wa-big{display:inline-flex;align-items:center;gap:14px;padding:20px 52px;background:#25D366;color:white;text-decoration:none;font-size:11px;letter-spacing:3px;text-transform:uppercase;transition:all .4s;white-space:nowrap}
-.wa-big:hover{background:#1EB558;transform:translateY(-2px);box-shadow:0 16px 50px rgba(37,211,102,.25)}
+.wa-big{display:inline-flex;align-items:center;gap:14px;padding:20px 52px;background:#25D366;color:white;text-decoration:none;font-size:11px;letter-spacing:3px;text-transform:uppercase;transition:all .4s;white-space:nowrap;position:relative;overflow:hidden}
+.wa-big::before{content:'';position:absolute;inset:0;background:#1EB558;transform:translateX(-101%);transition:transform .5s}
+.wa-big:hover::before{transform:translateX(0)}.wa-big:hover{transform:translateY(-2px);box-shadow:0 16px 50px rgba(37,211,102,.25)}.wa-big>*{position:relative;z-index:1}
 /* OTHER COLLECTIONS */
 .other{padding:80px;background:var(--wh)}
 .other-title{font-family:'Bodoni Moda',serif;font-size:clamp(28px,3vw,44px);font-weight:900;color:var(--bl);margin-bottom:40px}
@@ -97,6 +114,13 @@ nav.solid{padding:16px 80px;background:rgba(254,253,251,.97);border-bottom:1px s
 #lb img{max-width:90vw;max-height:88vh;object-fit:contain}
 #lb-x{position:absolute;top:28px;right:40px;font-size:28px;color:white;background:none;border:none;cursor:none;font-family:'Bodoni Moda',serif;font-weight:300;transition:color .3s}
 #lb-x:hover{color:var(--g)}
+/* FLOATING WA */
+.float-wa{position:fixed;bottom:36px;right:36px;z-index:9000;display:flex;align-items:center;gap:14px;opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s;pointer-events:none}
+.float-wa.show{opacity:1;transform:translateY(0);pointer-events:all}
+.float-wa-label{background:var(--bl);color:white;font-size:9px;letter-spacing:3px;text-transform:uppercase;padding:10px 18px;white-space:nowrap;opacity:0;transform:translateX(10px);transition:opacity .3s,transform .3s}
+.float-wa:hover .float-wa-label{opacity:1;transform:translateX(0)}
+.float-wa-btn{width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:24px;box-shadow:0 8px 32px rgba(37,211,102,.35);animation:wa-pulse 2.8s ease-in-out infinite}
+@keyframes wa-pulse{0%,100%{box-shadow:0 8px 32px rgba(37,211,102,.35)}50%{box-shadow:0 8px 48px rgba(37,211,102,.55),0 0 0 8px rgba(37,211,102,.08)}}
 .reveal{opacity:0;transform:translateY(40px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 [data-tr],[data-en],[data-ar]{display:none}
@@ -106,10 +130,13 @@ span[data-tr],span[data-en],span[data-ar]{display:none}
 @media(max-width:1024px){
 nav{padding:18px 24px}nav.solid{padding:12px 24px}
 .ph-cont{left:24px;right:24px;max-width:none}
+.trust-bar{padding:16px 24px;gap:24px;flex-wrap:wrap}
 .detail{grid-template-columns:1fr}.detail-img{min-height:280px}.detail-cont{padding:60px 24px}
 .pg{padding:72px 24px}.pg-grid{grid-template-columns:1fr 1fr}.pgi{height:220px}
 .wa-strip{padding:56px 24px;flex-direction:column;text-align:center}
 .other{padding:56px 24px}.other-grid{grid-template-columns:1fr 1fr}
+.float-wa{bottom:24px;right:20px}.float-wa-btn{width:52px;height:52px;font-size:22px}.float-wa-label{display:none}
+.cta-group{width:100%}.btn-cta,.btn-catalog{justify-content:center}
 }
 </style>
 </head>
@@ -136,18 +163,27 @@ nav{padding:18px 24px}nav.solid{padding:12px 24px}
   <img src="varna-hero.jpg" alt="Varna" onerror="this.style.background='linear-gradient(135deg,#2C2820,#C4A35A)'">
   <div class="ph-veil"></div>
   <div class="ph-cont">
-    <div class="ph-eye" data-tr>Koltuk Takımı · BIMOR</div>
-    <div class="ph-eye" data-en>Sofa Set · BIMOR</div>
+    <div class="ph-eye" data-tr>Koltuk Takımı · BIMOR · İnegöl</div>
+    <div class="ph-eye" data-en>Sofa Set · BIMOR · İnegöl</div>
     <div class="ph-eye" data-ar>طقم كنب · BIMOR</div>
     <h1 class="ph-title">Varna</h1>
-    <div class="ph-sub" data-tr>Özel Üretim · Altın Varak · İnegöl</div>
-    <div class="ph-sub" data-en>Custom Made · Gold Leaf · İnegöl</div>
-    <div class="ph-sub" data-ar>تصنيع مخصص · ورق الذهب · إينيغول</div>
+    <div class="ph-sub" data-tr>Custom Made · Gold Leaf · Middle East Delivery</div>
+    <div class="ph-sub" data-en>Custom Made · Gold Leaf · Middle East Delivery</div>
+    <div class="ph-sub" data-ar>تصنيع مخصص · ورق الذهب · توصيل الشرق الأوسط</div>
     <div class="ph-btns">
-      <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20Varna%20koleksiyonu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." class="btn-wa" target="_blank">💬 <span data-tr>Fiyat Al</span><span data-en>Get Price</span><span data-ar>احصل على السعر</span></a>
+      <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20Varna%20koleksiyonu%20hakk%C4%B1nda%20fiyat%20ve%20katalog%20almak%20istiyorum." class="btn-wa" target="_blank"><span>💬</span>&nbsp;<span data-tr>Fiyat & Katalog Al</span><span data-en>Get Price & Catalog</span><span data-ar>احصل على السعر والكتالوج</span></a>
       <a href="#detail" class="btn-ghost"><span data-tr>Detayları Gör</span><span data-en>See Details</span><span data-ar>عرض التفاصيل</span></a>
     </div>
   </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="tb-item"><span class="tb-icon">✦</span><span class="tb-text" data-tr>Özel Sipariş Üretim</span><span class="tb-text" data-en>Custom Order Production</span><span class="tb-text" data-ar>إنتاج حسب الطلب</span></div>
+  <div class="tb-item"><span class="tb-icon">◈</span><span class="tb-text" data-tr>Gerçek Altın Varak</span><span class="tb-text" data-en>Real Gold Leaf</span><span class="tb-text" data-ar>ورق الذهب الحقيقي</span></div>
+  <div class="tb-item"><span class="tb-icon">❋</span><span class="tb-text" data-tr>30+ Ülke İhracatı</span><span class="tb-text" data-en>Export to 30+ Countries</span><span class="tb-text" data-ar>تصدير إلى 30+ دولة</span></div>
+  <div class="tb-item"><span class="tb-icon">◇</span><span class="tb-text" data-tr>Villa · Otel · Proje</span><span class="tb-text" data-en>Villa · Hotel · Project</span><span class="tb-text" data-ar>فيلا · فندق · مشروع</span></div>
+  <div class="tb-item"><span class="tb-icon">🇹🇷</span><span class="tb-text" data-tr>İnegöl, Bursa Üretimi</span><span class="tb-text" data-en>Made in İnegöl, Turkey</span><span class="tb-text" data-ar>صنع في إينيغول، تركيا</span></div>
 </div>
 
 <!-- DETAIL -->
@@ -162,16 +198,23 @@ nav{padding:18px 24px}nav.solid{padding:12px 24px}
     <h2 class="d-title" data-tr>Varna <i>Koleksiyonu</i></h2>
     <h2 class="d-title" data-en>Varna <i>Collection</i></h2>
     <h2 class="d-title" data-ar>مجموعة <i>فارنا</i></h2>
-    <p class="d-body" data-tr>Varna koleksiyonu; berjer, koltuk takımı, yemek masası ve sehpa seçenekleriyle tam bir yaşam alanı çözümü sunar. El işçiliği ve altın varak detaylar.</p>
-    <p class="d-body" data-en>The Varna collection offers a complete living space solution with armchair, sofa set, dining table and coffee table options. Handcrafted with gold leaf details.</p>
-    <p class="d-body" data-ar>مجموعة فارنا تقدم حلاً متكاملاً للمساحة المعيشية مع خيارات الكرسي وطقم الكنب وطاولة الطعام.</p>
+    <p class="d-body" data-tr>Varna koleksiyonu; Karadeniz'in zarafetini İnegöl'ün usta işçiliğiyle birleştiriyor. Masif ahşap çerçeve, el işlemeli altın varak ve özel döşeme seçenekleriyle villa ve otel projelerine özel.</p>
+    <p class="d-body" data-en>Varna collection combines Black Sea elegance with İnegöl's master craftsmanship. Solid wood frame, hand-applied gold leaf and custom upholstery options — ideal for villa and hotel projects.</p>
+    <p class="d-body" data-ar>مجموعة فارنا تجمع بين أناقة البحر الأسود وحرفية إينيغول الماهرة. إطار خشب صلب وورق ذهب مطبق يدوياً — مثالية لمشاريع الفيلات والفنادق.</p>
     <div class="specs">
       <div class="spec"><div class="spec-l" data-tr>Malzeme</div><div class="spec-l" data-en>Material</div><div class="spec-l" data-ar>المادة</div><div class="spec-v" data-tr>Masif Ahşap · Altın Varak</div><div class="spec-v" data-en>Solid Wood · Gold Leaf</div><div class="spec-v" data-ar>خشب صلب · ورق الذهب</div></div>
-      <div class="spec"><div class="spec-l" data-tr>Döşeme</div><div class="spec-l" data-en>Upholstery</div><div class="spec-l" data-ar>التنجيد</div><div class="spec-v" data-tr>Özel kumaş seçeneği</div><div class="spec-v" data-en>Custom fabric options</div><div class="spec-v" data-ar>خيارات قماش مخصصة</div></div>
+      <div class="spec"><div class="spec-l" data-tr>Döşeme</div><div class="spec-l" data-en>Upholstery</div><div class="spec-l" data-ar>التنجيد</div><div class="spec-v" data-tr>Özel kumaş · Kadife · Deri</div><div class="spec-v" data-en>Custom fabric · Velvet · Leather</div><div class="spec-v" data-ar>قماش مخصص · مخمل · جلد</div></div>
       <div class="spec"><div class="spec-l" data-tr>Üretim</div><div class="spec-l" data-en>Made In</div><div class="spec-l" data-ar>الصنع</div><div class="spec-v">İnegöl, Bursa 🇹🇷</div></div>
-      <div class="spec"><div class="spec-l" data-tr>Teslimat</div><div class="spec-l" data-en>Delivery</div><div class="spec-l" data-ar>التسليم</div><div class="spec-v" data-tr>Dünya geneli</div><div class="spec-v" data-en>Worldwide</div><div class="spec-v" data-ar>عالمي</div></div>
+      <div class="spec"><div class="spec-l" data-tr>Teslimat</div><div class="spec-l" data-en>Delivery</div><div class="spec-l" data-ar>التسليم</div><div class="spec-v" data-tr>Türkiye, Orta Doğu, Avrupa, ABD</div><div class="spec-v" data-en>Turkey, Middle East, Europe, USA</div><div class="spec-v" data-ar>تركيا، الشرق الأوسط، أوروبا، أمريكا</div></div>
     </div>
-    <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20Varna%20koleksiyonu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." class="btn-cta" target="_blank"><span>💬 <span data-tr>WhatsApp'tan Fiyat Al</span><span data-en>Get Price on WhatsApp</span><span data-ar>احصل على السعر</span></span></a>
+    <div class="delivery-row">
+      <span class="delivery-flag">🌍</span>
+      <div><strong class="tb-text" data-tr>Middle East Delivery Available</strong><strong class="tb-text" data-en>Middle East Delivery Available</strong><strong class="tb-text" data-ar>توصيل متاح للشرق الأوسط</strong><span class="delivery-text" data-tr>Suudi Arabistan · BAE · Katar · Kuveyt · Ürdün</span><span class="delivery-text" data-en>Saudi Arabia · UAE · Qatar · Kuwait · Jordan</span><span class="delivery-text" data-ar>السعودية · الإمارات · قطر · الكويت · الأردن</span></div>
+    </div>
+    <div class="cta-group">
+      <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20Varna%20koleksiyonu%20hakk%C4%B1nda%20fiyat%20ve%20katalog%20almak%20istiyorum." class="btn-cta" target="_blank"><span>💬&nbsp;<span data-tr>WhatsApp'tan Fiyat Al</span><span data-en>Get Price on WhatsApp</span><span data-ar>احصل على السعر عبر واتساب</span></span></a>
+      <a href="https://wa.me/905446452430?text=Hello%20BIMOR%2C%20I%20would%20like%20to%20get%20a%20price%20and%20catalog%20for%20the%20Varna%20collection." class="btn-catalog" target="_blank"><span>📋&nbsp;<span data-tr>Katalog İste</span><span data-en>Request Catalog</span><span data-ar>اطلب الكتالوج</span></span></a>
+    </div>
   </div>
 </div>
 
@@ -182,18 +225,18 @@ nav{padding:18px 24px}nav.solid{padding:12px 24px}
   <h2 class="pg-title" data-ar>معرض <i>فارنا</i></h2>
   <div class="pg-grid">
     <div class="pgi" onclick="openLB(this)"><img src="varna-hero.jpg" alt="" onerror="this.style.background='linear-gradient(135deg,#C4A35A,#8A6E2F)'"><div class="pgi-hov"><div class="pgi-plus">+</div></div></div>
-    <div class="pgi" onclick="openLB(this)"><img src="varna-sofa.jpg" alt="" onerror="this.style.background='linear-gradient(135deg,#F7F0E0,#C4A35A)'"><div class="pgi-hov"><div class="pgi-plus">+</div></div></div>
-    <div class="pgi" onclick="openLB(this)"><img src="varna-berjer.jpg" alt="" onerror="this.style.background='linear-gradient(135deg,#DFC07A,#8A6E2F)'"><div class="pgi-hov"><div class="pgi-plus">+</div></div></div>
-    <div class="pgi" onclick="openLB(this)"><img src="varna-dining.jpg" alt="" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#F7F0E0)'"><div class="pgi-hov"><div class="pgi-plus">+</div></div></div>
+    <div class="pgi" onclick="openLB(this)"><img src="varna-sofa.jpg" alt="" onerror="this.style.background='linear-gradient(135deg,#C4A35A,#8A6E2F)'"><div class="pgi-hov"><div class="pgi-plus">+</div></div></div>
+    <div class="pgi" onclick="openLB(this)"><img src="varna-berjer.jpg" alt="" onerror="this.style.background='linear-gradient(135deg,#C4A35A,#8A6E2F)'"><div class="pgi-hov"><div class="pgi-plus">+</div></div></div>
+    <div class="pgi" onclick="openLB(this)"><img src="varna-detail.jpg" alt="" onerror="this.style.background='linear-gradient(135deg,#C4A35A,#8A6E2F)'"><div class="pgi-hov"><div class="pgi-plus">+</div></div></div>
   </div>
 </section>
 
 <!-- WA STRIP -->
 <div class="wa-strip reveal">
-  <div class="wa-strip-txt" data-tr>"Varna için <em>fiyat almak</em> ister misiniz?"</div>
-  <div class="wa-strip-txt" data-en>"Want to get a <em>price</em> for Varna?"</div>
-  <div class="wa-strip-txt" data-ar>"هل تريد الحصول على <em>سعر</em> لـ فارنا؟"</div>
-  <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20Varna%20koleksiyonu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." class="wa-big" target="_blank">💬 WhatsApp</a>
+  <div class="wa-strip-txt" data-tr>"Varna için fiyat ve <em>katalog</em> almak ister misiniz?"</div>
+  <div class="wa-strip-txt" data-en>"Would you like a <em>price & catalog</em> for Varna?"</div>
+  <div class="wa-strip-txt" data-ar>"هل تريد الحصول على <em>سعر وكتالوج</em> لمجموعة فارنا؟"</div>
+  <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20Varna%20koleksiyonu%20hakk%C4%B1nda%20fiyat%20ve%20katalog%20almak%20istiyorum." class="wa-big" target="_blank"><span>💬</span><span>&nbsp;WhatsApp</span></a>
 </div>
 
 <!-- OTHER COLLECTIONS -->
@@ -202,14 +245,22 @@ nav{padding:18px 24px}nav.solid{padding:12px 24px}
   <h2 class="other-title" data-en>Other <i>Collections</i></h2>
   <h2 class="other-title" data-ar>مجموعات <i>أخرى</i></h2>
   <div class="other-grid">
+    <a href="sahmaran.html" class="oc"><img src="sahmaran-hero.jpg" alt="Şahmaran" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#C4A35A)'"><div class="oc-ov"><div class="oc-name">Şahmaran</div></div></a>
     <a href="bagdat.html" class="oc"><img src="bagdat-hero.jpg" alt="Bağdat" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#C4A35A)'"><div class="oc-ov"><div class="oc-name">Bağdat</div></div></a>
-    <a href="alex.html" class="oc"><img src="alex-hero.jpg" alt="Alex" onerror="this.style.background='linear-gradient(135deg,#C4A35A,#F7F0E0)'"><div class="oc-ov"><div class="oc-name">Alex</div></div></a>
-    <a href="varna.html" class="oc"><img src="varna-hero.jpg" alt="Varna" onerror="this.style.background='linear-gradient(135deg,#DFC07A,#8A6E2F)'"><div class="oc-ov"><div class="oc-name">Varna</div></div></a>
-    <a href="milano.html" class="oc"><img src="milano-hero.jpg" alt="Milano" onerror="this.style.background='linear-gradient(135deg,#F7F0E0,#DFC07A)'"><div class="oc-ov"><div class="oc-name">Milano</div></div></a>
+    <a href="alex.html" class="oc"><img src="alex-hero.jpg" alt="Alex" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#C4A35A)'"><div class="oc-ov"><div class="oc-name">Alex</div></div></a>
+    <a href="hanedan.html" class="oc"><img src="hanedan-hero.jpg" alt="Hanedan" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#C4A35A)'"><div class="oc-ov"><div class="oc-name">Hanedan</div></div></a>
   </div>
 </section>
 
 <div id="lb" onclick="closeLB()"><button id="lb-x" onclick="closeLB()">×</button><img src="" alt="" id="lb-img"></div>
+
+<!-- FLOATING WHATSAPP -->
+<div class="float-wa" id="floatWa">
+  <div class="float-wa-label" data-tr>Fiyat Al</div>
+  <div class="float-wa-label" data-en>Get Price</div>
+  <div class="float-wa-label" data-ar>احصل على السعر</div>
+  <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20Varna%20koleksiyonu%20hakk%C4%B1nda%20fiyat%20ve%20katalog%20almak%20istiyorum." class="float-wa-btn" target="_blank" aria-label="WhatsApp">💬</a>
+</div>
 
 <script>
 const cur=document.getElementById('cur'),ring=document.getElementById('ring');
@@ -217,7 +268,10 @@ let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
 (function a(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
 document.querySelectorAll('a,button,.pgi,.oc').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));});
-window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('solid',scrollY>60);});
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('solid',scrollY>60);
+  document.getElementById('floatWa').classList.toggle('show',scrollY>300);
+});
 function setLang(l){document.body.setAttribute('data-lang',l);document.querySelectorAll('.lang-sw button').forEach((b,i)=>b.classList.toggle('active',['tr','en','ar'][i]===l));document.documentElement.dir=l==='ar'?'rtl':'ltr';}
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
