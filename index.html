@@ -188,10 +188,10 @@ footer{background:var(--bl);padding:72px 80px 36px}
 .reveal{opacity:0;transform:translateY(44px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 /* LANG */
-[data-tr],[data-en],[data-ar]{display:none}
-[data-lang="tr"] [data-tr]{display:block}[data-lang="en"] [data-en]{display:block}[data-lang="ar"] [data-ar]{display:block}
-span[data-tr],span[data-en],span[data-ar]{display:none}
-[data-lang="tr"] span[data-tr]{display:inline}[data-lang="en"] span[data-en]{display:inline}[data-lang="ar"] span[data-ar]{display:inline}
+[data-tr],[data-en],[data-ar],[data-de]{display:none}
+[data-lang="tr"] [data-tr]{display:block}[data-lang="en"] [data-en]{display:block}[data-lang="ar"] [data-ar]{display:block}[data-lang="de"] [data-de]{display:block}
+span[data-tr],span[data-en],span[data-ar],span[data-de]{display:none}
+[data-lang="tr"] span[data-tr]{display:inline}[data-lang="en"] span[data-en]{display:inline}[data-lang="ar"] span[data-ar]{display:inline}[data-lang="de"] span[data-de]{display:inline}
 /* ── PATCH: LUXURY CONVERSION UPGRADE ── */
 
 /* Export Badge */
@@ -275,8 +275,8 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
 <div id="pre"><div class="pre-logo">BIMOR</div><div class="pre-sub">Luxury Furniture</div><div class="pre-bar"><div class="pre-fill"></div></div></div>
 <div class="mob-menu" id="mob">
   <button class="mob-x" onclick="mobC()">×</button>
-  <a href="#collection" onclick="mobC()"><span data-tr>Koleksiyon</span><span data-en>Collection</span><span data-ar>المجموعة</span></a>
-  <a href="#contact-s" onclick="mobC()"><span data-tr>İletişim</span><span data-en>Contact</span><span data-ar>تواصل</span></a>
+  <a href="#collection" onclick="mobC()"><span data-tr>Koleksiyon</span><span data-en>Collection</span><span data-ar>المجموعة</span><span data-de>Kollektion</span></a>
+  <a href="#contact-s" onclick="mobC()"><span data-tr>İletişim</span><span data-en>Contact</span><span data-ar>تواصل</span><span data-de>Kontakt</span></a>
 </div>
 <nav id="nav">
   <a href="index.html" class="logo-wrap" style="text-decoration:none">
@@ -284,14 +284,15 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
     <div class="logo-sub">Luxury Furniture</div>
   </a>
   <ul class="nav-links">
-    <li><a href="#collection"><span data-tr>Koleksiyon</span><span data-en>Collection</span><span data-ar>المجموعة</span></a></li>
-    <li><a href="#contact-s"><span data-tr>İletişim</span><span data-en>Contact</span><span data-ar>تواصل</span></a></li>
+    <li><a href="#collection"><span data-tr>Koleksiyon</span><span data-en>Collection</span><span data-ar>المجموعة</span><span data-de>Kollektion</span></a></li>
+    <li><a href="#contact-s"><span data-tr>İletişim</span><span data-en>Contact</span><span data-de>Kontakt</span></a></li>
   </ul>
   <div class="nav-right">
     <div class="lang-sw">
       <button onclick="setLang('tr')" class="active">TR</button>
       <button onclick="setLang('en')">EN</button>
       <button onclick="setLang('ar')">AR</button>
+      <button onclick="setLang('de')">DE</button>
     </div>
     <a href="https://wa.me/905446452430" class="nav-wa" target="_blank"><span>💬</span><span>WhatsApp</span></a>
     <button class="ham" onclick="mobO()"><span></span><span></span><span></span></button>
@@ -301,18 +302,20 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
 <!-- HERO -->
 <section class="hero">
   <div class="hero-l">
-    <div class="export-badge"><span data-tr>Worldwide Export · Custom Manufacturing · İnegöl</span><span data-en>Worldwide Export · Custom Manufacturing · İnegöl</span><span data-ar>تصدير عالمي · تصنيع مخصص · إينيغول</span></div>
+    <div class="export-badge"><span data-tr>Worldwide Export · Custom Manufacturing · İnegöl</span><span data-en>Worldwide Export · Custom Manufacturing · İnegöl</span><span data-ar>تصدير عالمي · تصنيع مخصص · إينيغول</span><span data-de>Weltweiter Export · Individuelle Fertigung · İnegöl</span></div>
     <div class="h-eye" data-tr>İnegöl · Bursa · Dünyaya</div>
     <div class="h-eye" data-en>İnegöl · Bursa · Worldwide</div>
     <div class="h-eye" data-ar>إينيغول · بورصة · للعالم</div>
-    <h1 class="h-title"><span data-tr>Lüksü<i>Yaşatıyoruz</i></span><span data-en>We Craft<i>Luxury</i></span><span data-ar>نصنع<i>الفخامة</i></span></h1>
+    <div class="h-eye" data-de>İnegöl · Bursa · Weltweit</div>
+    <h1 class="h-title"><span data-tr>Lüksü<i>Yaşatıyoruz</i></span><span data-en>We Craft<i>Luxury</i></span><span data-ar>نصنع<i>الفخامة</i></span><span data-de>Wir schaffen<i>Luxus</i></span></h1>
     <div class="h-rule"></div>
     <p class="h-desc" data-tr>Türkiye'nin mobilya merkezi İnegöl'de doğan, dünya pazarlarına ihraç eden lüks mobilya markası. Her parça özel sipariş üretilir.</p>
     <p class="h-desc" data-en>A luxury furniture brand born in İnegöl — Turkey's furniture capital. Every piece is custom-made and exported worldwide.</p>
     <p class="h-desc" data-ar>علامة تجارية فاخرة للأثاث من إينيغول. كل قطعة مصنوعة حسب الطلب وتُصدَّر عالمياً.</p>
+    <p class="h-desc" data-de>Eine Luxus-Möbelmarke aus İnegöl — Türkeis Möbelhauptstadt. Jedes Stück wird auf Bestellung gefertigt und weltweit exportiert.</p>
     <div class="h-btns">
-      <a href="#collection" class="btn-dark"><span data-tr>Koleksiyonu Keşfet</span><span data-en>Explore Collection</span><span data-ar>اكتشف المجموعة</span></a>
-      <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20fiyat%20almak%20istiyorum." class="btn-wa-hero" target="_blank"><span>💬</span>&nbsp;<span data-tr>Fiyat Al</span><span data-en>Get Quote</span><span data-ar>احصل على سعر</span></a>
+      <a href="#collection" class="btn-dark"><span data-tr>Koleksiyonu Keşfet</span><span data-en>Explore Collection</span><span data-ar>اكتشف المجموعة</span><span data-de>Kollektion entdecken</span></a>
+      <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20fiyat%20almak%20istiyorum." class="btn-wa-hero" target="_blank"><span>💬</span>&nbsp;<span data-tr>Fiyat Al</span><span data-en>Get Quote</span><span data-ar>احصل على سعر</span><span data-de>Angebot anfragen</span></a>
     </div>
   </div>
   <div class="hero-r">
@@ -321,6 +324,7 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
       <div class="ht-big" data-tr>"Saray esintisi, el işçiliğinin sanatı"</div>
       <div class="ht-big" data-en>"The art of handcraft mastery"</div>
       <div class="ht-big" data-ar>"فن الحرفة اليدوية الراقية"</div>
+      <div class="ht-big" data-de>"Die Kunst meisterhafter Handarbeit"</div>
       <div class="ht-sm">Custom Made · Gold Leaf · İnegöl</div>
     </div>
   </div>
@@ -330,16 +334,16 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
 <!-- MARQUEE -->
 <div class="marquee"><div class="m-inner">
   <div class="mi"><span>Custom Made</span><span class="dot">✦</span></div>
-  <div class="mi"><span data-tr>Altın Varak</span><span data-en>Gold Leaf</span><span data-ar>ورق الذهب</span><span class="dot">✦</span></div>
-  <div class="mi"><span data-tr>İnegöl Kalitesi</span><span data-en>İnegöl Quality</span><span data-ar>جودة إينيغول</span><span class="dot">✦</span></div>
+  <div class="mi"><span data-tr>Altın Varak</span><span data-en>Gold Leaf</span><span data-ar>ورق الذهب</span><span data-de>Blattgold</span><span class="dot">✦</span></div>
+  <div class="mi"><span data-tr>İnegöl Kalitesi</span><span data-en>İnegöl Quality</span><span data-ar>جودة إينيغول</span><span data-de>İnegöl-Qualität</span><span class="dot">✦</span></div>
   <div class="mi"><span>Worldwide Export</span><span class="dot">✦</span></div>
-  <div class="mi"><span data-tr>Toptan Satış</span><span data-en>Wholesale</span><span data-ar>بيع الجملة</span><span class="dot">✦</span></div>
+  <div class="mi"><span data-tr>Toptan Satış</span><span data-en>Wholesale</span><span data-ar>بيع الجملة</span><span data-de>Großhandel</span><span class="dot">✦</span></div>
   <div class="mi"><span>Classic & Avangarde</span><span class="dot">✦</span></div>
   <div class="mi"><span>Custom Made</span><span class="dot">✦</span></div>
-  <div class="mi"><span data-tr>Altın Varak</span><span data-en>Gold Leaf</span><span data-ar>ورق الذهب</span><span class="dot">✦</span></div>
-  <div class="mi"><span data-tr>İnegöl Kalitesi</span><span data-en>İnegöl Quality</span><span data-ar>جودة إينيغول</span><span class="dot">✦</span></div>
+  <div class="mi"><span data-tr>Altın Varak</span><span data-en>Gold Leaf</span><span data-ar>ورق الذهب</span><span data-de>Blattgold</span><span class="dot">✦</span></div>
+  <div class="mi"><span data-tr>İnegöl Kalitesi</span><span data-en>İnegöl Quality</span><span data-ar>جودة إينيغول</span><span data-de>İnegöl-Qualität</span><span class="dot">✦</span></div>
   <div class="mi"><span>Worldwide Export</span><span class="dot">✦</span></div>
-  <div class="mi"><span data-tr>Toptan Satış</span><span data-en>Wholesale</span><span data-ar>بيع الجملة</span><span class="dot">✦</span></div>
+  <div class="mi"><span data-tr>Toptan Satış</span><span data-en>Wholesale</span><span data-ar>بيع الجملة</span><span data-de>Großhandel</span><span class="dot">✦</span></div>
   <div class="mi"><span>Classic & Avangarde</span><span class="dot">✦</span></div>
 </div></div>
 
@@ -349,6 +353,7 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
     <p class="stmt-q" data-tr>"Bir mobilya sadece bir nesne değildir — o, bir <em>mirastır.</em> Her kesim, her varak, her dikiş; sonsuzluğa gönderilmiş bir mesajdır."</p>
     <p class="stmt-q" data-en>"A piece of furniture is not merely an object — it is a <em>legacy.</em> Every cut, every leaf, every stitch is a message sent to eternity."</p>
     <p class="stmt-q" data-ar>"قطعة الأثاث ليست مجرد شيء — إنها <em>إرث.</em> كل قطعة، كل ورقة، كل غرزة رسالة أُرسلت إلى الأبد."</p>
+    <p class="stmt-q" data-de>"Ein Möbelstück ist nicht nur ein Gegenstand — es ist ein <em>Erbe.</em> Jeder Schnitt, jedes Blatt, jeder Stich ist eine Botschaft für die Ewigkeit."</p>
     <div class="stmt-attr">BIMOR — Luxury Furniture · İnegöl, Türkiye</div>
   </div>
 </section>
@@ -360,25 +365,28 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
       <div class="col-eye" data-tr>Koleksiyonlarımız</div>
       <div class="col-eye" data-en>Our Collections</div>
       <div class="col-eye" data-ar>مجموعاتنا</div>
+      <div class="col-eye" data-de>Unsere Kollektionen</div>
       <h2 class="col-title" data-tr>Her Mekân<br>İçin <i>Zarafet</i></h2>
       <h2 class="col-title" data-en>Elegance for<br><i>Every Space</i></h2>
       <h2 class="col-title" data-ar>أناقة<br><i>لكل مكان</i></h2>
+      <h2 class="col-title" data-de>Eleganz<br><i>für jeden Raum</i></h2>
     </div>
     <p class="col-desc" data-tr>10 eşsiz koleksiyon. Her biri özel sipariş üretilir. Renk, kumaş, boyut — tamamen size özel.</p>
     <p class="col-desc" data-en>10 unique collections. Each made to order. Color, fabric, size — entirely yours.</p>
     <p class="col-desc" data-ar>10 مجموعات فريدة. كل منها مصنوع حسب الطلب.</p>
+    <p class="col-desc" data-de>10 einzigartige Kollektionen. Jede auf Bestellung gefertigt.</p>
   </div>
   <div class="col-grid">
-    <a href="bagdat.html" class="cc"><img src="bagdat-hero.jpg" alt="Bağdat" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#C4A35A)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Bağdat</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="alex.html" class="cc"><img src="alex-hero.jpg" alt="Alex" onerror="this.style.background='linear-gradient(135deg,#C4A35A,#F7F0E0)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Alex</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="varna.html" class="cc"><img src="varna-hero.jpg" alt="Varna" onerror="this.style.background='linear-gradient(135deg,#DFC07A,#8A6E2F)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Varna</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="milano.html" class="cc"><img src="milano-hero.jpg" alt="Milano" onerror="this.style.background='linear-gradient(135deg,#F7F0E0,#DFC07A)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Yemek Odası</div><div class="cc-cat" data-en>Dining Room</div><div class="cc-cat" data-ar>غرفة طعام</div><div class="cc-name">Milano</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="hanedan.html" class="cc"><img src="hanedan-hero.jpg" alt="Hanedan" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#F7F0E0)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Hanedan</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="sahmaran.html" class="cc"><img src="sahmaran-hero.jpg" alt="Şahmaran" onerror="this.style.background='linear-gradient(135deg,#C4A35A,#2C2820)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Şahmaran</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="zera.html" class="cc"><img src="zera-hero.jpg" alt="Zera" onerror="this.style.background='linear-gradient(135deg,#F7F0E0,#C4A35A)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-name">Zera</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="aslan-throne.html" class="cc"><img src="aslan-throne.jpg" alt="Aslan Throne" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#C4A35A)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Özel Koleksiyon</div><div class="cc-cat" data-en>Special Collection</div><div class="cc-cat" data-ar>مجموعة خاصة</div><div class="cc-name">Aslan Throne</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="vezir.html" class="cc"><img src="vezir-rocking.jpg" alt="Vezir" onerror="this.style.background='linear-gradient(135deg,#DFC07A,#C4A35A)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Sallanan Koltuk</div><div class="cc-cat" data-en>Rocking Chair</div><div class="cc-cat" data-ar>كرسي هزاز</div><div class="cc-name">Vezir</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
-    <a href="sumen.html" class="cc"><img src="sumen-chaise.jpg" alt="Sümen" onerror="this.style.background='linear-gradient(135deg,#F7F0E0,#8A6E2F)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Şezlong</div><div class="cc-cat" data-en>Chaise Lounge</div><div class="cc-cat" data-ar>شيزلونج</div><div class="cc-name">Sümen</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span> →</div></div></a>
+    <a href="bagdat.html" class="cc"><img src="bagdat-hero.jpg" alt="Bağdat" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#C4A35A)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-cat" data-de>Sofagarnitur</div><div class="cc-name">Bağdat</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span><span data-de>Entdecken</span> →</div></div></a>
+    <a href="alex.html" class="cc"><img src="alex-hero.jpg" alt="Alex" onerror="this.style.background='linear-gradient(135deg,#C4A35A,#F7F0E0)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-cat" data-de>Sofagarnitur</div><div class="cc-name">Alex</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span><span data-de>Entdecken</span> →</div></div></a>
+    <a href="varna.html" class="cc"><img src="varna-hero.jpg" alt="Varna" onerror="this.style.background='linear-gradient(135deg,#DFC07A,#8A6E2F)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-cat" data-de>Sofagarnitur</div><div class="cc-name">Varna</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span><span data-de>Entdecken</span> →</div></div></a>
+    <a href="milano.html" class="cc"><img src="milano-hero.jpg" alt="Milano" onerror="this.style.background='linear-gradient(135deg,#F7F0E0,#DFC07A)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Yemek Odası</div><div class="cc-cat" data-en>Dining Room</div><div class="cc-cat" data-ar>غرفة طعام</div><div class="cc-cat" data-de>Esszimmer</div><div class="cc-name">Milano</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span><span data-de>Entdecken</span> →</div></div></a>
+    <a href="hanedan.html" class="cc"><img src="hanedan-hero.jpg" alt="Hanedan" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#F7F0E0)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-cat" data-de>Sofagarnitur</div><div class="cc-name">Hanedan</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span><span data-de>Entdecken</span> →</div></div></a>
+    <a href="sahmaran.html" class="cc"><img src="sahmaran-hero.jpg" alt="Şahmaran" onerror="this.style.background='linear-gradient(135deg,#C4A35A,#2C2820)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-cat" data-de>Sofagarnitur</div><div class="cc-name">Şahmaran</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span><span data-de>Entdecken</span> →</div></div></a>
+    <a href="zera.html" class="cc"><img src="zera-hero.jpg" alt="Zera" onerror="this.style.background='linear-gradient(135deg,#F7F0E0,#C4A35A)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Koltuk Takımı</div><div class="cc-cat" data-en>Sofa Set</div><div class="cc-cat" data-ar>طقم كنب</div><div class="cc-cat" data-de>Sofagarnitur</div><div class="cc-name">Zera</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span><span data-de>Entdecken</span> →</div></div></a>
+    <a href="aslan-throne.html" class="cc"><img src="aslan-throne.jpg" alt="Aslan Throne" onerror="this.style.background='linear-gradient(135deg,#8A6E2F,#C4A35A)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Özel Koleksiyon</div><div class="cc-cat" data-en>Special Collection</div><div class="cc-cat" data-ar>مجموعة خاصة</div><div class="cc-cat" data-de>Sonderkollektion</div><div class="cc-name">Aslan Throne</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span><span data-de>Entdecken</span> →</div></div></a>
+    <a href="vezir.html" class="cc"><img src="vezir-rocking.jpg" alt="Vezir" onerror="this.style.background='linear-gradient(135deg,#DFC07A,#C4A35A)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Sallanan Koltuk</div><div class="cc-cat" data-en>Rocking Chair</div><div class="cc-cat" data-ar>كرسي هزاز</div><div class="cc-cat" data-de>Schaukelstuhl</div><div class="cc-name">Vezir</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span><span data-de>Entdecken</span> →</div></div></a>
+    <a href="sumen.html" class="cc"><img src="sumen-chaise.jpg" alt="Sümen" onerror="this.style.background='linear-gradient(135deg,#F7F0E0,#8A6E2F)'"><div class="cc-glow"></div><div class="cc-ov"><div class="cc-cat" data-tr>Şezlong</div><div class="cc-cat" data-en>Chaise Lounge</div><div class="cc-cat" data-ar>شيزلونج</div><div class="cc-cat" data-de>Chaiselongue</div><div class="cc-name">Sümen</div><div class="cc-cta"><span data-tr>İncele</span><span data-en>Explore</span><span data-ar>اكتشف</span><span data-de>Entdecken</span> →</div></div></a>
   </div>
 </section>
 
@@ -387,69 +395,77 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
   <video autoplay muted loop playsinline><source src="Video_Project_4.mp4" type="video/mp4"></video>
   <div class="vid-fb"></div><div class="vid-veil"></div>
   <div class="vid-txt">
-    <div class="vid-lbl" data-tr>BIMOR · Atölye</div><div class="vid-lbl" data-en>BIMOR · Workshop</div><div class="vid-lbl" data-ar>BIMOR · الورشة</div>
+    <div class="vid-lbl" data-tr>BIMOR · Atölye</div><div class="vid-lbl" data-en>BIMOR · Workshop</div><div class="vid-lbl" data-ar>BIMOR · الورشة</div><div class="vid-lbl" data-de>BIMOR · Werkstatt</div>
     <h2 class="vid-h" data-tr>Üretimde<i>Mükemmellik</i></h2>
     <h2 class="vid-h" data-en>Excellence in<i>Craftsmanship</i></h2>
     <h2 class="vid-h" data-ar>التميز في<i>الحرفة</i></h2>
+    <h2 class="vid-h" data-de>Exzellenz in<i>Handwerk</i></h2>
   </div>
 </div>
 
 <!-- PILLARS -->
 <section class="pillars reveal">
   <div class="pillars-head">
-    <div class="p-eye" data-tr>Neden BIMOR?</div><div class="p-eye" data-en>Why BIMOR?</div><div class="p-eye" data-ar>لماذا BIMOR؟</div>
+    <div class="p-eye" data-tr>Neden BIMOR?</div><div class="p-eye" data-en>Why BIMOR?</div><div class="p-eye" data-ar>لماذا BIMOR؟</div><div class="p-eye" data-de>Warum BIMOR?</div>
     <h2 class="p-title" data-tr>Farkımız<br><i>Detaylarda</i></h2>
     <h2 class="p-title" data-en>Our Difference<br><i>Is in the Details</i></h2>
     <h2 class="p-title" data-ar>فرقنا<br><i>في التفاصيل</i></h2>
+      <h2 class="p-title" data-de>Unser Unterschied<br><i>im Detail</i></h2>
   </div>
   <div class="p-grid">
-    <div class="pillar"><div class="p-num">01</div><span class="p-icon">✦</span><div class="p-name" data-tr>Özel Üretim</div><div class="p-name" data-en>Custom Made</div><div class="p-name" data-ar>تصنيع مخصص</div><p class="p-text" data-tr>Her ürün siparişe özel üretilir. Boyut, renk, kumaş ve detay — tamamen size göre tasarlanır.</p><p class="p-text" data-en>Every piece is made to order. Size, color, fabric and detail — designed entirely for you.</p><p class="p-text" data-ar>كل منتج مصنوع حسب الطلب. الأبعاد، اللون، القماش — مصمم خصيصاً لك.</p><div class="p-badges"><span class="p-badge" data-tr>Villa</span><span class="p-badge" data-en>Villa</span><span class="p-badge" data-tr>Otel</span><span class="p-badge" data-en>Hotel</span><span class="p-badge" data-tr>Proje</span><span class="p-badge" data-en>Project</span></div></div>
-    <div class="pillar"><div class="p-num">02</div><span class="p-icon">◈</span><div class="p-name" data-tr>Altın Varak & Premium Materyal</div><div class="p-name" data-en>Gold Leaf & Premium Material</div><div class="p-name" data-ar>ورق الذهب والمواد الفاخرة</div><p class="p-text" data-tr>El uygulamalı gerçek altın varak, velvet ve premium kumaşlar her parçayı bir sanat eserine dönüştürür.</p><p class="p-text" data-en>Hand-applied real gold leaf, velvet and premium fabrics transform each piece into a work of art.</p><p class="p-text" data-ar>ورق الذهب الحقيقي، المخمل والأقمشة الفاخرة تحوّل كل قطعة إلى تحفة فنية.</p></div>
-    <div class="pillar"><div class="p-num">03</div><span class="p-icon">❋</span><div class="p-name" data-tr>Dünya İhracatı</div><div class="p-name" data-en>Global Export</div><div class="p-name" data-ar>تصدير عالمي</div><p class="p-text" data-tr>30+ ülkeye sorunsuz ihracat. Profesyonel ambalaj, sigortalı lojistik ve teslimat takibi biz de.</p><p class="p-text" data-en>Seamless export to 30+ countries. Professional packaging, insured logistics and delivery tracking — handled by us.</p><p class="p-text" data-ar>تصدير سلس إلى أكثر من 30 دولة. تغليف احترافي ولوجستيات مؤمّنة.</p></div>
-    <div class="pillar"><div class="p-num">04</div><span class="p-icon">◇</span><div class="p-name" data-tr>Fabrikadan Direkt Fiyat</div><div class="p-name" data-en>Direct Factory Price</div><div class="p-name" data-ar>سعر المصنع المباشر</div><p class="p-text" data-tr>Aracı yok. Fabrikadan direkt alım — Avrupa kalitesi, doğru fiyat. Toptan ve perakende her ölçek için çözüm.</p><p class="p-text" data-en>No middlemen. Direct factory purchase — European quality, fair price. Solutions for wholesale and retail at every scale.</p><p class="p-text" data-ar>لا وسطاء. شراء مباشر من المصنع — جودة أوروبية، سعر عادل.</p></div>
+    <div class="pillar"><div class="p-num">01</div><span class="p-icon">✦</span><div class="p-name" data-tr>Özel Üretim</div><div class="p-name" data-en>Custom Made</div><div class="p-name" data-ar>تصنيع مخصص</div><div class="p-name" data-de>Individuelle Fertigung</div><p class="p-text" data-tr>Her ürün siparişe özel üretilir. Boyut, renk, kumaş ve detay — tamamen size göre tasarlanır.</p><p class="p-text" data-en>Every piece is made to order. Size, color, fabric and detail — designed entirely for you.</p><p class="p-text" data-ar>كل منتج مصنوع حسب الطلب. الأبعاد، اللون، القماش — مصمم خصيصاً لك.</p><p class="p-text" data-de>Jedes Produkt wird auf Bestellung gefertigt. Größe, Farbe, Stoff und Details — ganz nach Ihren Wünschen.</p><div class="p-badges"><span class="p-badge" data-tr>Villa</span><span class="p-badge" data-en>Villa</span><span class="p-badge" data-tr>Otel</span><span class="p-badge" data-en>Hotel</span><span class="p-badge" data-tr>Proje</span><span class="p-badge" data-en>Project</span></div></div>
+    <div class="pillar"><div class="p-num">02</div><span class="p-icon">◈</span><div class="p-name" data-tr>Altın Varak & Premium Materyal</div><div class="p-name" data-en>Gold Leaf & Premium Material</div><div class="p-name" data-ar>ورق الذهب والمواد الفاخرة</div><div class="p-name" data-de>Blattgold & Premium-Materialien</div><p class="p-text" data-tr>El uygulamalı gerçek altın varak, velvet ve premium kumaşlar her parçayı bir sanat eserine dönüştürür.</p><p class="p-text" data-en>Hand-applied real gold leaf, velvet and premium fabrics transform each piece into a work of art.</p><p class="p-text" data-ar>ورق الذهب الحقيقي، المخمل والأقمشة الفاخرة تحوّل كل قطعة إلى تحفة فنية.</p><p class="p-text" data-de>Handaufgetragenes echtes Blattgold, Samt und Premium-Stoffe verwandeln jedes Stück in ein Kunstwerk.</p></div>
+    <div class="pillar"><div class="p-num">03</div><span class="p-icon">❋</span><div class="p-name" data-tr>Dünya İhracatı</div><div class="p-name" data-en>Global Export</div><div class="p-name" data-ar>تصدير عالمي</div><div class="p-name" data-de>Weltweiter Export</div><p class="p-text" data-tr>30+ ülkeye sorunsuz ihracat. Profesyonel ambalaj, sigortalı lojistik ve teslimat takibi biz de.</p><p class="p-text" data-en>Seamless export to 30+ countries. Professional packaging, insured logistics and delivery tracking — handled by us.</p><p class="p-text" data-ar>تصدير سلس إلى أكثر من 30 دولة. تغليف احترافي ولوجستيات مؤمّنة.</p><p class="p-text" data-de>Reibungsloser Export in 30+ Länder. Professionelle Verpackung, versicherte Logistik und Lieferverfolgung — von uns übernommen.</p></div>
+    <div class="pillar"><div class="p-num">04</div><span class="p-icon">◇</span><div class="p-name" data-tr>Fabrikadan Direkt Fiyat</div><div class="p-name" data-en>Direct Factory Price</div><div class="p-name" data-ar>سعر المصنع المباشر</div><div class="p-name" data-de>Direkter Fabrikpreis</div><p class="p-text" data-tr>Aracı yok. Fabrikadan direkt alım — Avrupa kalitesi, doğru fiyat. Toptan ve perakende her ölçek için çözüm.</p><p class="p-text" data-en>No middlemen. Direct factory purchase — European quality, fair price. Solutions for wholesale and retail at every scale.</p><p class="p-text" data-ar>لا وسطاء. شراء مباشر من المصنع — جودة أوروبية، سعر عادل.</p><p class="p-text" data-de>Keine Zwischenhändler. Direktkauf ab Werk — europäische Qualität, fairer Preis. Lösungen für Groß- und Einzelhandel.</p></div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <div class="contact-s reveal" id="contact-s">
   <div class="c-l">
-    <div class="c-eye" data-tr>İletişim</div><div class="c-eye" data-en>Contact</div><div class="c-eye" data-ar>تواصل</div>
+    <div class="c-eye" data-tr>İletişim</div><div class="c-eye" data-en>Contact</div><div class="c-eye" data-ar>تواصل</div><div class="c-eye" data-de>Kontakt</div>
     <h2 class="c-title" data-tr>Hayalinizdeki<br><i>Mobilyayı</i><br>Konuşalım</h2>
     <h2 class="c-title" data-en>Let's Discuss<br>Your Dream<br><i>Furniture</i></h2>
     <h2 class="c-title" data-ar>لنتحدث عن<br><i>أثاث</i><br>أحلامك</h2>
+    <h2 class="c-title" data-de>Sprechen wir über<br><i>Ihre Traum-</i><br>möbel</h2>
     <p class="c-body" data-tr>Özel üretim, toptan sipariş ve ihracat için en hızlı yol WhatsApp. 7/24 yanınızdayız.</p>
     <p class="c-body" data-en>For custom orders, wholesale and export, the fastest way is WhatsApp. We're here 7/24.</p>
     <p class="c-body" data-ar>للطلبات المخصصة، أسرع طريق هو واتساب. نحن هنا 7/24.</p>
+    <p class="c-body" data-de>Für individuelle Bestellungen ist WhatsApp der schnellste Weg. Wir sind 7/24 für Sie da.</p>
     <div class="c-info">
       <div class="c-row"><span class="c-lbl">WhatsApp</span><span class="c-val"><a href="https://wa.me/905446452430" target="_blank">+90 544 645 24 30</a></span></div>
       <div class="c-row"><span class="c-lbl">Instagram</span><span class="c-val"><a href="https://instagram.com/bimor_store" target="_blank">@bimor_store</a></span></div>
       <div class="c-row"><span class="c-lbl">Facebook</span><span class="c-val"><a href="https://facebook.com/profile.php?id=61575530913797" target="_blank">BIMOR Luxury Furniture</a></span></div>
-      <div class="c-row"><span class="c-lbl" data-tr>Adres</span><span class="c-lbl" data-en>Address</span><span class="c-lbl" data-ar>العنوان</span><span class="c-val">İnegöl, Bursa · Türkiye 🇹🇷</span></div>
+      <div class="c-row"><span class="c-lbl" data-tr>Adres</span><span class="c-lbl" data-en>Address</span><span class="c-lbl" data-ar>العنوان</span><span class="c-lbl" data-de>Adresse</span><span class="c-val">İnegöl, Bursa · Türkiye 🇹🇷</span></div>
     </div>
-    <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20bilgi%20almak%20istiyorum." class="c-wa" target="_blank"><span>💬</span>&nbsp;<span data-tr>WhatsApp'ta Yaz</span><span data-en>Message on WhatsApp</span><span data-ar>راسلنا</span></a>
+    <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20bilgi%20almak%20istiyorum." class="c-wa" target="_blank"><span>💬</span>&nbsp;<span data-tr>WhatsApp'ta Yaz</span><span data-en>Message on WhatsApp</span><span data-ar>راسلنا</span><span data-de>WhatsApp schreiben</span></a>
     <div class="c-trust">
       <div class="c-trust-item" data-tr>7/24 Yanınızdayız</div>
       <div class="c-trust-item" data-en>Available 24/7</div>
       <div class="c-trust-item" data-ar>متاح 24/7</div>
+      <div class="c-trust-item" data-de>24/7 verfügbar</div>
       <div class="c-trust-item" data-tr>Ortalama 15dk Yanıt</div>
       <div class="c-trust-item" data-en>~15min Response</div>
       <div class="c-trust-item" data-ar>رد خلال 15 دقيقة</div>
+      <div class="c-trust-item" data-de>Antwort in 15 Min.</div>
       <div class="c-trust-item" data-tr>30+ Ülke İhracatı</div>
       <div class="c-trust-item" data-en>30+ Countries Served</div>
       <div class="c-trust-item" data-ar>خدمة أكثر من 30 دولة</div>
+      <div class="c-trust-item" data-de>Service in 30+ Ländern</div>
     </div>
   </div>
   <div class="c-r">
-    <div class="c-form-title" data-tr>Teklif İsteyin</div><div class="c-form-title" data-en>Request a Quote</div><div class="c-form-title" data-ar>اطلب عرض سعر</div>
+    <div class="c-form-title" data-tr>Teklif İsteyin</div><div class="c-form-title" data-en>Request a Quote</div><div class="c-form-title" data-ar>اطلب عرض سعر</div><div class="c-form-title" data-de>Angebot anfragen</div>
     <div class="c-form-sub" data-tr>Formu doldurun, hemen WhatsApp'tan dönelim</div>
     <div class="c-form-sub" data-en>Fill the form, we'll reply via WhatsApp</div>
     <div class="c-form-sub" data-ar>املأ النموذج وسنرد عبر واتساب</div>
+      <div class="c-form-sub" data-de>Formular ausfüllen, wir antworten per WhatsApp</div>
     <div class="frow">
-      <div class="fg"><div class="fl" data-tr>Ad Soyad</div><div class="fl" data-en>Full Name</div><div class="fl" data-ar>الاسم</div><input type="text" class="fi" id="fn"></div>
-      <div class="fg"><div class="fl" data-tr>Telefon / WA</div><div class="fl" data-en>Phone / WA</div><div class="fl" data-ar>الهاتف</div><input type="tel" class="fi" id="fp"></div>
+      <div class="fg"><div class="fl" data-tr>Ad Soyad</div><div class="fl" data-en>Full Name</div><div class="fl" data-ar>الاسم</div><div class="fl" data-de>Name</div><input type="text" class="fi" id="fn"></div>
+      <div class="fg"><div class="fl" data-tr>Telefon / WA</div><div class="fl" data-en>Phone / WA</div><div class="fl" data-ar>الهاتف</div><div class="fl" data-de>Telefon / WA</div><input type="tel" class="fi" id="fp"></div>
     </div>
     <div class="fg">
-      <div class="fl" data-tr>Koleksiyon</div><div class="fl" data-en>Collection</div><div class="fl" data-ar>المجموعة</div>
+      <div class="fl" data-tr>Koleksiyon</div><div class="fl" data-en>Collection</div><div class="fl" data-ar>المجموعة</div><div class="fl" data-de>Kollektion</div>
       <select class="fs" id="fc">
         <option>Bağdat</option><option>Alex</option><option>Varna</option><option>Milano</option>
         <option>Hanedan</option><option>Şahmaran</option><option>Zera</option>
@@ -457,8 +473,8 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
         <option data-tr>Özel Üretim</option><option data-en>Custom Order</option>
       </select>
     </div>
-    <div class="fg"><div class="fl" data-tr>Mesajınız</div><div class="fl" data-en>Message</div><div class="fl" data-ar>رسالتك</div><textarea class="fa" id="fm" rows="4"></textarea></div>
-    <button class="fbtn" onclick="sendWA()"><span data-tr>WhatsApp ile Gönder</span><span data-en>Send via WhatsApp</span><span data-ar>إرسال</span></button>
+    <div class="fg"><div class="fl" data-tr>Mesajınız</div><div class="fl" data-en>Message</div><div class="fl" data-ar>رسالتك</div><div class="fl" data-de>Nachricht</div><textarea class="fa" id="fm" rows="4"></textarea></div>
+    <button class="fbtn" onclick="sendWA()"><span data-tr>WhatsApp ile Gönder</span><span data-en>Send via WhatsApp</span><span data-ar>إرسال</span><span data-de>Per WhatsApp senden</span></button>
   </div>
 </div>
 
@@ -469,6 +485,7 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
       <p data-tr>İnegöl'den dünyaya. Özel üretim, toptan satış ve ihracat.</p>
       <p data-en>From İnegöl to the world. Custom production, wholesale and export.</p>
       <p data-ar>من إينيغول إلى العالم.</p>
+      <p data-de>Von İnegöl in die Welt.</p>
       <div class="ft-soc">
         <a href="https://wa.me/905446452430" target="_blank">💬</a>
         <a href="https://instagram.com/bimor_store" target="_blank">📷</a>
@@ -476,7 +493,7 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
       </div>
     </div>
     <div class="ft-col">
-      <h5 data-tr>Koleksiyonlar</h5><h5 data-en>Collections</h5><h5 data-ar>المجموعات</h5>
+      <h5 data-tr>Koleksiyonlar</h5><h5 data-en>Collections</h5><h5 data-ar>المجموعات</h5><h5 data-de>Kollektionen</h5>
       <ul>
         <li><a href="bagdat.html">Bağdat</a></li><li><a href="alex.html">Alex</a></li>
         <li><a href="varna.html">Varna</a></li><li><a href="milano.html">Milano</a></li>
@@ -484,14 +501,14 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
       </ul>
     </div>
     <div class="ft-col">
-      <h5 data-tr>Daha Fazla</h5><h5 data-en>More</h5><h5 data-ar>المزيد</h5>
+      <h5 data-tr>Daha Fazla</h5><h5 data-en>More</h5><h5 data-ar>المزيد</h5><h5 data-de>Mehr</h5>
       <ul>
         <li><a href="zera.html">Zera</a></li><li><a href="aslan-throne.html">Aslan Throne</a></li>
         <li><a href="vezir.html">Vezir</a></li><li><a href="sumen.html">Sümen</a></li>
       </ul>
     </div>
     <div class="ft-col">
-      <h5 data-tr>İletişim</h5><h5 data-en>Contact</h5><h5 data-ar>تواصل</h5>
+      <h5 data-tr>İletişim</h5><h5 data-en>Contact</h5><h5 data-ar>تواصل</h5><h5 data-de>Kontakt</h5>
       <ul>
         <li><a href="https://wa.me/905446452430">+90 544 645 24 30</a></li>
         <li><a href="https://instagram.com/bimor_store">@bimor_store</a></li>
@@ -510,7 +527,7 @@ footer{padding:56px 24px 24px}.ft-top{grid-template-columns:1fr 1fr;gap:36px}.fr
 <div class="float-wa" id="floatWa">
   <div class="float-wa-label" data-tr>Hemen Yaz</div>
   <div class="float-wa-label" data-en>Chat Now</div>
-  <div class="float-wa-label" data-ar>تواصل الآن</div>
+  <div class="float-wa-label" data-ar>تواصل الآن</div><div class="float-wa-label" data-de>Jetzt schreiben</div>
   <a href="https://wa.me/905446452430?text=Merhaba%20BIMOR%2C%20bilgi%20almak%20istiyorum." class="float-wa-btn" target="_blank" aria-label="WhatsApp">💬</a>
 </div>
 
@@ -525,7 +542,7 @@ window.addEventListener('scroll',()=>{
   document.getElementById('nav').classList.toggle('solid',scrollY>60);
   document.getElementById('floatWa').classList.toggle('show',scrollY>300);
 });
-function setLang(l){document.body.setAttribute('data-lang',l);document.querySelectorAll('.lang-sw button').forEach((b,i)=>b.classList.toggle('active',['tr','en','ar'][i]===l));document.documentElement.dir=l==='ar'?'rtl':'ltr';}
+function setLang(l){document.body.setAttribute('data-lang',l);document.querySelectorAll('.lang-sw button').forEach((b,i)=>b.classList.toggle('active',['tr','en','ar','de'][i]===l));document.documentElement.dir=l==='ar'?'rtl':'ltr';}
 function mobO(){document.getElementById('mob').classList.add('open');}
 function mobC(){document.getElementById('mob').classList.remove('open');}
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.1});
