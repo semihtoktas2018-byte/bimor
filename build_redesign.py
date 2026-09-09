@@ -13,7 +13,7 @@ SITE = "https://bimor.store"
 idx = open('index.html', encoding='utf-8').read()
 STYLE = re.search(r'<style>(.*?)</style>', idx, re.S).group(1)
 FONTS = re.search(r'(<link href="https://fonts\.googleapis\.com/css2\?family=Fraunces[^>]*/>)', idx).group(1)
-FOOTER = re.search(r'(<footer>.*?</footer>)', idx, re.S).group(1)
+FOOTER = re.search(r'(<footer[^>]*>.*?</footer>)', idx, re.S).group(1)
 # export / KB Logistics seridi: <div class="export" ...> ... </div> (split section'in ikinci cocugu)
 EXPORT = re.search(r'(<div class="export"[^>]*>.*?)</section>', idx, re.S).group(1).rstrip()
 
@@ -63,6 +63,7 @@ L = {
  'back':    ('Tüm Koleksiyonlar','All Collections','كل المجموعات','Alle Kollektionen','Все коллекции'),
  'home':    ('Ana Sayfa','Home','الرئيسية','Start','Главная'),
  'colls':   ('Koleksiyonlar','Collections','المجموعات','Kollektionen','Коллекции'),
+ 'about':   ('Hakkımızda','About','من نحن','Über uns','О нас'),
  'export':  ('İhracat','Export','التصدير','Export','Экспорт'),
  'contact': ('İletişim','Contact','تواصل','Kontakt','Контакты'),
  'details': ('Ürün Detayları','Product Details','تفاصيل المنتج','Produktdetails','Детали изделия'),
@@ -166,10 +167,17 @@ PRODUCTS = {
 }
 
 NAV = """<nav>
-<div class="brand"><span class="b">BIMOR</span><span class="s">LUXURY FURNITURE</span></div>
-<div class="nav-links"><a href="index.html">{home}</a><a href="index.html#col">{colls}</a><a href="index.html#export">{export}</a><a href="index.html#pre">{contact}</a></div>
-<div class="nav-right"><a class="navback" href="index.html">← {back}</a><span class="langsw"><button class="active" onclick="setLang('tr')">TR</button><button onclick="setLang('en')">EN</button><button onclick="setLang('ar')">AR</button><button onclick="setLang('de')">DE</button><button onclick="setLang('ru')">RU</button></span><a class="btn plum" href="{wa}">{navquote}</a></div>
+<a href="/" class="brand" aria-label="BIMOR — Ana Sayfa"><span class="b">BIMOR</span><span class="s">LUXURY FURNITURE</span></a>
+<div class="nav-links"><a href="/">{home}</a><a href="index.html#col">{colls}</a><a href="index.html#craft">{about}</a><a href="index.html#export">{export}</a><a href="index.html#pre">{contact}</a></div>
+<div class="nav-right"><div class="nav-top"><span class="langsw"><button class="active" onclick="setLang('tr')">TR</button><button onclick="setLang('en')">EN</button><button onclick="setLang('ar')">AR</button><button onclick="setLang('de')">DE</button><button onclick="setLang('ru')">RU</button></span><a class="btn plum" href="{wa}">{navquote}</a></div><div class="wclock" id="wclock"></div></div>
 </nav>"""
+
+CLOCK = """<script>
+(function(){var z=[['🇹🇷','Europe/Istanbul'],['🇩🇪','Europe/Berlin'],['🇷🇺','Europe/Moscow'],['🇦🇪','Asia/Dubai']];
+function tick(){var el=document.getElementById('wclock');if(!el)return;
+el.innerHTML=z.map(function(c){try{var t=new Intl.DateTimeFormat('tr-TR',{hour:'2-digit',minute:'2-digit',timeZone:c[1]}).format(new Date());return c[0]+' <b>'+t+'</b>';}catch(e){return '';}}).join('&nbsp;&nbsp;·&nbsp;&nbsp;');}
+tick();setInterval(tick,1000);})();
+</script>"""
 
 SCRIPT = """<script>
 function setLang(l){document.body.setAttribute('data-lang',l);document.documentElement.dir=(l==='ar')?'rtl':'ltr';document.documentElement.lang=l;
@@ -211,8 +219,8 @@ def build(slug, p):
 <style>{STYLE}{ADDCSS}</style>
 </head>'''
 
-    nav = NAV.format(home=ml(*L['home']), colls=ml(*L['colls']), export=ml(*L['export']),
-                     contact=ml(*L['contact']), back=ml(*L['back']), navquote=ml(*L['navquote']), wa=wa)
+    nav = NAV.format(home=ml(*L['home']), colls=ml(*L['colls']), about=ml(*L['about']),
+                     export=ml(*L['export']), contact=ml(*L['contact']), navquote=ml(*L['navquote']), wa=wa)
 
     # HERO
     phero = f'''<header class="phero">
@@ -263,6 +271,7 @@ def build(slug, p):
 {kb}
 {FOOTER}
 {SCRIPT}
+{CLOCK}
 </body>
 </html>'''
 
