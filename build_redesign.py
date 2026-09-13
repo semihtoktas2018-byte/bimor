@@ -184,6 +184,102 @@ function setLang(l){document.body.setAttribute('data-lang',l);document.documentE
 var b=document.querySelectorAll('.langsw button');['tr','en','ar','de','ru'].forEach(function(x,i){if(b[i])b[i].classList.toggle('active',x===l);});}
 </script>"""
 
+# ---- SEO: baslik tipi (tip) ----
+TYPE = {'sofa':'Koltuk Takımı','special':'Taht Koltuğu','dining':'Yemek Odası','chaise':'Şezlong','rocking':'Sallanan Koltuk'}
+
+# ---- SEO: benzersiz meta description (TR, ~150-160 karakter) ----
+METADESC = {
+ 'alex':"Alex lüks koltuk takımı: çağdaş hatlar, premium kumaşlar ve altın varak detaylar. İnegöl üretimi; Avrupa, Orta Doğu ve Rusya'ya ihracat yapan BIMOR imzası.",
+ 'aslan-throne':"Aslan Throne lüks taht koltuğu: el oyması, gerçek altın varak ve avangart tasarım. İnegöl üretimi; Orta Doğu ve Avrupa'ya ihracat yapan BIMOR imzası.",
+ 'bagdat':"Bağdat lüks klasik koltuk takımı: görkemli ahşap oymalar ve altın varak işçiliği. İnegöl üretimi; Avrupa, Rusya ve Körfez'e ihracat yapan BIMOR imzası.",
+ 'hanedan':"Hanedan lüks koltuk takımı: görkemli boyutlar, el oymaları ve altın varak detaylar. İnegöl üretimi; Avrupa ve Orta Doğu'ya ihracat yapan BIMOR imzası.",
+ 'milano':"Milano lüks yemek odası takımı: zarif masa, özel sandalyeler ve altın varak. İnegöl üretimi; Avrupa, Rusya ve Orta Doğu'ya ihracat yapan BIMOR imzası.",
+ 'sahmaran':"Şahmaran lüks koltuk takımı: çarpıcı altın varak ve özel renk seçenekleri. İnegöl üretimi; Avrupa, Rusya ve Orta Doğu'ya ihracat yapan BIMOR imzası.",
+ 'sumen':"Sümen lüks şezlong: ergonomik tasarım, premium döşeme ve altın varak detaylar. İnegöl üretimi; Avrupa ve Orta Doğu'ya ihracat yapan BIMOR imzası.",
+ 'varna':"Varna lüks koltuk takımı: masif ahşap çerçeve ve el işlemeli altın varak. İnegöl üretimi; villa/otel projeleri ve Avrupa-Rusya ihracatıyla BIMOR imzası.",
+ 'vezir':"Vezir lüks sallanan koltuk: geleneksel ahşap işçiliği ve modern konfor bir arada. İnegöl üretimi; Avrupa ve Orta Doğu'ya ihracat yapan BIMOR imzası.",
+ 'zera':"Zera lüks koltuk takımı: ince hatlar, yumuşak eğriler ve premium döşeme. İnegöl üretimi; Avrupa, Orta Doğu ve Rusya'ya ihracat yapan BIMOR imzası.",
+}
+
+# ---- SEO: benzersiz ikinci icerik paragrafi (tr,en,ar,de,ru) ----
+PARA2 = {
+ 'alex':("İnegöl'ün usta atölyelerinde üretilen Alex koltuk takımı, modern villalar ve otel projeleri için ideal bir seçimdir. Avrupa, Rusya ve Orta Doğu'ya kendi filomuzla ihraç edilir.",
+   "Crafted in İnegöl's master workshops, the Alex sofa set is an ideal choice for modern villas and hotel projects. We export it to Europe, Russia and the Middle East with our own fleet.",
+   "يُصنع طقم كنب أليكس في ورش إينيغول المتخصصة، وهو خيار مثالي للفلل الحديثة ومشاريع الفنادق. نصدّره إلى أوروبا وروسيا والشرق الأوسط بأسطولنا الخاص.",
+   "Das in den Meisterwerkstätten von İnegöl gefertigte Alex-Sofaset ist die ideale Wahl für moderne Villen und Hotelprojekte. Wir exportieren es mit eigener Flotte nach Europa, Russland und in den Nahen Osten.",
+   "Изготовленный в мастерских Инегёля диван Alex — идеальный выбор для современных вилл и отельных проектов. Мы экспортируем его в Европу, Россию и на Ближний Восток собственным автопарком."),
+ 'aslan-throne':("Aslan Throne, saray konseptli villalar ve prestijli mekânlar için tasarlanmış avangart bir taht koltuğudur. İnegöl işçiliğiyle üretilir, Orta Doğu ve Avrupa'ya ihraç edilir.",
+   "Aslan Throne is an avant-garde throne chair designed for palace-concept villas and prestigious venues. Made with İnegöl craftsmanship and exported to the Middle East and Europe.",
+   "أسلان ثرون كرسي عرش طليعي مصمم للفلل ذات الطابع القصري والأماكن المرموقة. يُصنع بحرفية إينيغول ويُصدَّر إلى الشرق الأوسط وأوروبا.",
+   "Aslan Throne ist ein avantgardistischer Thronsessel für Villen im Palast-Konzept und prestigeträchtige Orte. Gefertigt mit İnegöl-Handwerk und exportiert in den Nahen Osten und nach Europa.",
+   "Aslan Throne — авангардное кресло-трон для вилл в дворцовом стиле и престижных пространств. Изготовлено с мастерством Инегёля и экспортируется на Ближний Восток и в Европу."),
+ 'bagdat':("Bağdat klasik koltuk takımı, geniş oturma odaları ve davet salonları için görkemli bir seçenektir. İnegöl'de el işçiliğiyle üretilir; Avrupa, Rusya ve Körfez ülkelerine ihraç edilir.",
+   "The Bağdat classic sofa set is a magnificent option for spacious living rooms and reception halls. Handcrafted in İnegöl and exported to Europe, Russia and the Gulf countries.",
+   "طقم كنب بغداد الكلاسيكي خيار فخم لغرف المعيشة الواسعة وقاعات الاستقبال. يُصنع يدوياً في إينيغول ويُصدَّر إلى أوروبا وروسيا ودول الخليج.",
+   "Die klassische Bağdat-Sofagarnitur ist eine prächtige Wahl für große Wohnzimmer und Empfangssäle. In İnegöl handgefertigt und nach Europa, Russland und in die Golfstaaten exportiert.",
+   "Классический диванный гарнитур Bağdat — великолепный выбор для просторных гостиных и залов приёмов. Ручная работа из Инегёля, экспорт в Европу, Россию и страны Залива."),
+ 'hanedan':("Hanedan koltuk takımı, görkemli boyutları ve el oymalarıyla saray tarzı yaşam alanları için üretilir. İnegöl lüks mobilya geleneğiyle Avrupa ve Orta Doğu'ya ihraç edilir.",
+   "The Hanedan sofa set, with its majestic dimensions and hand carvings, is made for palace-style living spaces. Exported to Europe and the Middle East in İnegöl's luxury furniture tradition.",
+   "طقم كنب هانيدان بأبعاده المهيبة ونقوشه اليدوية مصنوع لمساحات المعيشة بأسلوب القصور. يُصدَّر إلى أوروبا والشرق الأوسط ضمن تقاليد إينيغول للأثاث الفاخر.",
+   "Die Hanedan-Sofagarnitur mit ihren majestätischen Maßen und Handschnitzereien ist für Wohnräume im Palaststil gemacht. Exportiert nach Europa und in den Nahen Osten in der Luxusmöbeltradition von İnegöl.",
+   "Диванный гарнитур Hanedan с величественными размерами и ручной резьбой создан для гостиных в дворцовом стиле. Экспортируется в Европу и на Ближний Восток в традициях люксовой мебели Инегёля."),
+ 'milano':("Milano lüks yemek odası takımı, zarif sofraları ağırlayan modern ve klasik mekânlar için tasarlandı. İnegöl üretimi olup Avrupa, Rusya ve Orta Doğu'ya ihraç edilir.",
+   "The Milano luxury dining room set is designed for modern and classic spaces that host elegant gatherings. Made in İnegöl and exported to Europe, Russia and the Middle East.",
+   "طقم غرفة طعام ميلانو الفاخر مصمم للمساحات الحديثة والكلاسيكية التي تستضيف الولائم الأنيقة. صناعة إينيغول ويُصدَّر إلى أوروبا وروسيا والشرق الأوسط.",
+   "Das luxuriöse Milano-Esszimmer ist für moderne und klassische Räume gedacht, die elegante Anlässe beherbergen. Hergestellt in İnegöl und exportiert nach Europa, Russland und in den Nahen Osten.",
+   "Роскошный столовый гарнитур Milano создан для современных и классических пространств, где принимают гостей. Производство Инегёля, экспорт в Европу, Россию и на Ближний Восток."),
+ 'sahmaran':("Şahmaran koltuk takımı, çarpıcı altın varak detayları ve özel renk seçenekleriyle avangart yaşam alanları için üretilir. İnegöl'den Avrupa, Rusya ve Orta Doğu'ya ihraç edilir.",
+   "The Şahmaran sofa set, with striking gold leaf details and custom color options, is made for avant-garde living spaces. Exported from İnegöl to Europe, Russia and the Middle East.",
+   "طقم كنب شهماران بتفاصيل ورق الذهب اللافتة وخيارات الألوان المخصصة مصنوع للمساحات الطليعية. يُصدَّر من إينيغول إلى أوروبا وروسيا والشرق الأوسط.",
+   "Die Şahmaran-Sofagarnitur mit markanten Blattgold-Details und individuellen Farboptionen ist für avantgardistische Wohnräume gemacht. Exportiert von İnegöl nach Europa, Russland und in den Nahen Osten.",
+   "Диванный гарнитур Şahmaran с яркими деталями из сусального золота и выбором цвета создан для авангардных пространств. Экспорт из Инегёля в Европу, Россию и на Ближний Восток."),
+ 'sumen':("Sümen şezlong, yatak odası ve oturma alanlarına lüks bir dinlenme köşesi katan ergonomik bir tasarımdır. İnegöl üretimi olup Avrupa ve Orta Doğu'ya ihraç edilir.",
+   "The Sümen chaise lounge is an ergonomic design that adds a luxurious resting corner to bedrooms and living areas. Made in İnegöl and exported to Europe and the Middle East.",
+   "أريكة الاسترخاء سومن تصميم مريح يضيف ركن راحة فاخراً إلى غرف النوم ومناطق الجلوس. صناعة إينيغول وتُصدَّر إلى أوروبا والشرق الأوسط.",
+   "Die Sümen-Chaiselongue ist ein ergonomisches Design, das Schlaf- und Wohnbereichen eine luxuriöse Ruhezone verleiht. Hergestellt in İnegöl und exportiert nach Europa und in den Nahen Osten.",
+   "Шезлонг Sümen — эргономичный дизайн, добавляющий спальням и гостиным роскошный уголок отдыха. Производство Инегёля, экспорт в Европу и на Ближний Восток."),
+ 'varna':("Varna koltuk takımı, masif ahşap çerçevesi ve el işlemeli altın varağıyla villa ve otel projelerine özeldir. İnegöl'den Avrupa, Rusya ve Orta Doğu'ya ihraç edilir.",
+   "The Varna sofa set, with its solid wood frame and hand-applied gold leaf, is tailored to villa and hotel projects. Exported from İnegöl to Europe, Russia and the Middle East.",
+   "طقم كنب فارنا بإطاره الخشبي الصلب وورق الذهب المطبق يدوياً مخصص لمشاريع الفلل والفنادق. يُصدَّر من إينيغول إلى أوروبا وروسيا والشرق الأوسط.",
+   "Die Varna-Sofagarnitur mit Massivholzrahmen und von Hand aufgetragenem Blattgold ist auf Villen- und Hotelprojekte zugeschnitten. Exportiert von İnegöl nach Europa, Russland und in den Nahen Osten.",
+   "Диванный гарнитур Varna с каркасом из массива дерева и нанесённым вручную сусальным золотом создан для вилл и отелей. Экспорт из Инегёля в Европу, Россию и на Ближний Восток."),
+ 'vezir':("Vezir sallanan koltuk, geleneksel ahşap işçiliğini modern konforla buluşturan nadir bir dinlenme parçasıdır. İnegöl üretimi olup Avrupa ve Orta Doğu'ya ihraç edilir.",
+   "The Vezir rocking chair is a rare resting piece uniting traditional woodwork with modern comfort. Made in İnegöl and exported to Europe and the Middle East.",
+   "كرسي الهزاز وزير قطعة استرخاء نادرة تجمع النجارة التقليدية بالراحة الحديثة. صناعة إينيغول ويُصدَّر إلى أوروبا والشرق الأوسط.",
+   "Der Vezir-Schaukelstuhl ist ein seltenes Ruhemöbel, das traditionelle Holzarbeit mit modernem Komfort verbindet. Hergestellt in İnegöl und exportiert nach Europa und in den Nahen Osten.",
+   "Кресло-качалка Vezir — редкий предмет для отдыха, соединяющий традиционную работу по дереву с современным комфортом. Производство Инегёля, экспорт в Европу и на Ближний Восток."),
+ 'zera':("Zera koltuk takımı, ince hatları ve yumuşak eğrileriyle modern lüks yaşam alanları için üretilir. İnegöl lüks mobilya kalitesiyle Avrupa, Rusya ve Orta Doğu'ya ihraç edilir.",
+   "The Zera sofa set, with its fine lines and soft curves, is made for modern luxury living spaces. Exported to Europe, Russia and the Middle East with İnegöl luxury furniture quality.",
+   "طقم كنب زيرا بخطوطه الرفيعة ومنحنياته الناعمة مصنوع لمساحات المعيشة الفاخرة الحديثة. يُصدَّر إلى أوروبا وروسيا والشرق الأوسط بجودة إينيغول للأثاث الفاخر.",
+   "Die Zera-Sofagarnitur mit feinen Linien und sanften Rundungen ist für moderne, luxuriöse Wohnräume gemacht. Exportiert nach Europa, Russland und in den Nahen Osten mit İnegöl-Luxusmöbelqualität.",
+   "Диванный гарнитур Zera с тонкими линиями и мягкими изгибами создан для современных роскошных пространств. Экспорт в Европу, Россию и на Ближний Восток с качеством люксовой мебели Инегёля."),
+}
+
+# ---- SEO: gorsel alt descriptor (dosya son ekine gore, TR) ----
+ALTDESC = {'sofa':'koltuk detayı','berjer':'berjer koltuk','table':'orta sehpa','dining':'yemek masası takımı',
+           'detail':'altın varak işçilik detayı','relax':'relax koltuk','chaise':'şezlong','rocking':'sallanan koltuk'}
+
+def alt_for(name, tip, img, is_hero=False):
+    if is_hero:
+        return f"{name} lüks {tip} - BIMOR İnegöl"
+    base = img.rsplit('.',1)[0]
+    suf = base.split('-')[-1] if '-' in base else ''
+    d = ALTDESC.get(suf)
+    return f"{name} {d} - BIMOR" if d else f"{name} {tip} - BIMOR İnegöl"
+
+HREF_LANGS = ('tr','en','ar','de','ru')
+def hreflang(url):
+    ls = "".join(f'<link rel="alternate" hreflang="{l}" href="{url}"/>' for l in HREF_LANGS)
+    return ls + f'<link rel="alternate" hreflang="x-default" href="{url}"/>'
+
+GSC = '<meta name="google-site-verification" content="GSC_KODU_BURAYA"/>'
+
+def breadcrumb(name, url):
+    return ('{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":['
+            '{"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"https://bimor.store/"},'
+            '{"@type":"ListItem","position":2,"name":"Koleksiyonlar","item":"https://bimor.store/#col"},'
+            '{"@type":"ListItem","position":3,"name":"%s","item":"%s"}]}') % (esc(name), url)
+
 def wa_link(name):
     msg = f"Merhaba BIMOR, {name} koleksiyonu hakkında fiyat ve katalog almak istiyorum."
     return "https://wa.me/905446452430?text=" + quote(msg)
@@ -193,10 +289,11 @@ def esc(s):
 
 def build(slug, p):
     name = p['name']; cat = CAT[p['cat']]; desc = p['desc']; imgs = p['imgs']; hero = imgs[0]
+    tip = TYPE[p['cat']]; para2 = PARA2[slug]
     wa = wa_link(name)
     ogimg = f"{SITE}/{hero}"; url = f"{SITE}/{slug}.html"
-    title = f"BIMOR — {name} {L['coll'][0]}"
-    metadesc = esc(desc[0])
+    title = f"{name} Koleksiyonu — Lüks {tip} | BIMOR"
+    metadesc = esc(METADESC[slug])
     jsonld = ('{"@context":"https://schema.org","@type":"Product","name":"BIMOR %s",'
               '"image":"%s","description":"%s","category":"%s",'
               '"brand":{"@type":"Brand","name":"BIMOR Luxury Furniture"},'
@@ -209,12 +306,15 @@ def build(slug, p):
 <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>{title}</title>
 <meta content="{metadesc}" name="description"/>
+{GSC}
 <link href="{url}" rel="canonical"/>
+<link rel="alternate" hreflang="tr" href="{url}"/><link rel="alternate" hreflang="en" href="{url}"/><link rel="alternate" hreflang="ar" href="{url}"/><link rel="alternate" hreflang="de" href="{url}"/><link rel="alternate" hreflang="ru" href="{url}"/><link rel="alternate" hreflang="x-default" href="{url}"/>
 <meta content="product" property="og:type"/><meta content="BIMOR Luxury Furniture" property="og:site_name"/>
 <meta content="{esc(title)}" property="og:title"/><meta content="{metadesc}" property="og:description"/>
 <meta content="{ogimg}" property="og:image"/><meta content="{url}" property="og:url"/><meta content="tr_TR" property="og:locale"/>
 <meta content="summary_large_image" name="twitter:card"/><meta content="{esc(title)}" name="twitter:title"/><meta content="{metadesc}" name="twitter:description"/><meta content="{ogimg}" name="twitter:image"/>
 <script type="application/ld+json">{jsonld}</script>
+<script type="application/ld+json">{breadcrumb(name, url)}</script>
 {FONTS}
 <style>{STYLE}{ADDCSS}</style>
 </head>'''
@@ -224,7 +324,7 @@ def build(slug, p):
 
     # HERO
     phero = f'''<header class="phero">
-<div class="pimg"><img alt="{esc(name)}" src="{hero}"/></div>
+<div class="pimg"><img alt="{esc(alt_for(name, tip, hero, is_hero=True))}" src="{hero}"/></div>
 <div class="ptext">
 <span class="eyebrow">{ml(*cat)} · İnegöl</span>
 <h1 class="serif">{esc(name)}</h1>
@@ -234,7 +334,7 @@ def build(slug, p):
 </header>'''
 
     # GALLERY
-    tiles = "\n".join(f'<div class="gi"><img alt="{esc(name)}" src="{im}"/></div>' for im in imgs)
+    tiles = "\n".join(f'<div class="gi"><img alt="{esc(alt_for(name, tip, im))}" src="{im}"/></div>' for im in imgs)
     gal = f'''<section class="gal wrap">
 <h2 class="serif"><span class="pl">{esc(name)}</span> · {ml(*L['gallery'])}</h2>
 <div class="galgrid">
@@ -251,6 +351,7 @@ def build(slug, p):
 <span class="eyebrow">{ml(*L['details'])}</span>
 <h2 class="serif"><span class="pl">{esc(name)}</span> {ml(*L['coll'])}</h2>
 <p class="db" data-tr>{desc[0]}</p><p class="db" data-en>{desc[1]}</p><p class="db" data-ar>{desc[2]}</p><p class="db" data-de>{desc[3]}</p><p class="db" data-ru>{desc[4]}</p>
+<p class="db" data-tr>{para2[0]}</p><p class="db" data-en>{para2[1]}</p><p class="db" data-ar>{para2[2]}</p><p class="db" data-de>{para2[3]}</p><p class="db" data-ru>{para2[4]}</p>
 </div>
 <div class="specs">
 {spec(SL['mat'], p['mat'])}
